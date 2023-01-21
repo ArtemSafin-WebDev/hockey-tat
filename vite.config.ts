@@ -5,7 +5,6 @@ import pagesConfig from "./pages.config";
 import globalContext from "./pages-data/globalContext";
 
 export default {
-  base: "/hockey-tat/",
   plugins: [
     createSvgIconsPlugin({
       iconDirs: [resolve(process.cwd(), "src/icons")],
