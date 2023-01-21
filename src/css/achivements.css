@@ -1,0 +1,470 @@
+.achivements {
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+  color: white;
+}
+
+.achivements__bg {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  &::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-image: linear-gradient(0deg, #008000, #008000);
+    mix-blend-mode: multiply;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-image: linear-gradient(
+      98.31deg,
+      rgba(0, 128, 0, 0.92) 10.52%,
+      rgba(35, 61, 61, 0.92) 79.6%
+    );
+    z-index: 2;
+  }
+}
+
+.achievments__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.achivements__content {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  grid-row: 1 / 2;
+  padding-top: 12rem;
+  padding-bottom: 25.5rem;
+  z-index: 2;
+}
+
+.achivements__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 15rem));
+  grid-gap: 4rem;
+}
+
+.achivements__card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+}
+
+.achivements__card-amount {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 7rem;
+  line-height: 8.2rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.achivements__card-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.achivements__heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 4.7rem;
+  text-align: center;
+  margin-bottom: 8rem;
+  position: relative;
+  white-space: nowrap;
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7rem;
+    line-height: 8.2rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    opacity: 0.07;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    pointer-events: none;
+  }
+}
+
+.achivements__leagues-wrapper {
+  margin-top: -18.5rem;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 4rem;
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  z-index: 5;
+}
+
+.achivements__leagues {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -4rem;
+  grid-column: 2 / 12;
+}
+
+.achivements__leagues-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.achivements__leagues-tabs-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.achivements__leagues-tabs-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: #19251e;
+  color: white;
+  transition: color 0.2s, background-color 0.2s;
+  white-space: nowrap;
+  user-select: none;
+  padding: 1.1rem 2.4rem;
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) {
+    &:not(.active):hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+}
+
+.achivements__leagues-tabs-items,
+.achivements__leagues-inner-tabs {
+  position: relative;
+}
+
+.achivements__leagues-tabs-item,
+.achivements__leagues-inner-tab {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease 0.4s, visibility 0s linear 0.8s;
+  z-index: 10;
+
+  &.active {
+    position: relative;
+    z-index: 15;
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+}
+
+.achivements__leagues-team-slider {
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0px 2rem 6rem rgba(0, 40, 9, 0.1);
+}
+
+.achivements__leagues-team-slider-card {
+  box-sizing: border-box;
+  padding: 6rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.achivements__leagues-team-slider-card-logo-wrapper {
+  width: 6rem;
+  flex-shrink: 0;
+  margin-left: -2rem;
+  margin-top: -1rem;
+  align-self: flex-start;
+}
+
+.achivements__leagues-team-slider-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.achivements__leagues-team-slider-card-main-content {
+  width: 20%;
+  flex-grow: 1;
+  padding-bottom: 3rem;
+  padding-top: 1rem;
+}
+
+.achivements__leagues-team-slider-card-top-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4.5rem;
+}
+
+.achivements__leagues-team-slider-card-selector {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.achivements__leagues-team-slider-card-selector-btn {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  gap: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: #19251e;
+  & svg {
+    width: 0.6rem;
+    height: 0.4rem;
+    fill: #ff0000;
+    transition: transform 0.2s;
+    margin-top: 0.2em;
+  }
+}
+
+.achivements__leagues-team-slider-card-selector.active
+  .achivements__leagues-team-slider-card-selector-btn {
+  & svg {
+    transform: rotate(180deg);
+  }
+}
+
+.achivements__leagues-team-slider-card-selector-dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding-top: 0.5rem;
+  width: 20rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  z-index: 20;
+  margin-left: -1.7rem;
+}
+
+.achivements__leagues-team-slider-card-selector.active
+  .achivements__leagues-team-slider-card-selector-dropdown {
+  opacity: 1;
+  visibility: inherit;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.achivements__leagues-team-slider-card-selector-dropdown-inner {
+  background: #ffffff;
+  box-shadow: 0px 2rem 3rem rgba(0, 40, 9, 0.2);
+  padding: 2rem;
+}
+
+.achivements__leagues-team-slider-card-selector-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.achivements__leagues-team-slider-card-selector-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #4e524e;
+  transition: color 0.2s;
+  &:link,
+  &:visited {
+    color: #4e524e;
+  }
+
+  &.active {
+    color: #19251e;
+    font-weight: 500;
+  }
+}
+
+.achivements__leagues-team-slider-card-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+  &:link,
+  &:visited {
+    color: var(--primary-color);
+  }
+
+  & svg {
+    width: 0.4rem;
+    height: 0.6rem;
+    fill: #ff0000;
+    margin-top: 0.18em;
+  }
+}
+
+.achivements__leagues-team-slider-card-heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 1.9rem;
+  color: #19251e;
+}
+
+.achivements__leagues-team-slider-card-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #19251e;
+}
+
+.achivements__leagues-team-slider-card-award-wrapper {
+  aspect-ratio: 1 / 1;
+  position: relative;
+  width: 32rem;
+}
+
+.achivements__leagues-team-slider-card-award-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.achivements__leagues-team-slider-pagination {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  counter-reset: ordered-list;
+  position: absolute;
+  z-index: 6;
+  left: 14rem;
+  bottom: 6rem;
+}
+
+.achivements__leagues-team-slider-pagination-bullet {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  counter-increment: ordered-list;
+  &.active {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  @media (hover: hover) {
+    &:not(.active):hover {
+      & .achivements__leagues-team-slider-pagination-bullet-dot {
+        background-color: var(--primary-color);
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.achivements__leagues-team-slider-pagination-bullet-timer {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  display: grid;
+  place-items: center;
+  transition: opacity 0.2s;
+  opacity: 0;
+  & svg {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.achivements__leagues-team-slider-pagination-bullet.active
+  .achivements__leagues-team-slider-pagination-bullet-timer {
+  opacity: 1;
+}
+
+.achivements__leagues-team-slider-pagination-bullet-timer-number {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: var(--primary-color);
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  z-index: 1;
+  display: grid;
+  text-align: center;
+  place-items: center;
+  &::before {
+    content: counter(ordered-list, decimal-leading-zero);
+  }
+}
+
+.achivements__leagues-team-slider-pagination-bullet-dot {
+  background: #d1d6cf;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  transition: background-color 0.2s, opacity 0.2s, transform 0.2s;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.achivements__leagues-team-slider-pagination-bullet.active
+  .achivements__leagues-team-slider-pagination-bullet-dot {
+  opacity: 0;
+}

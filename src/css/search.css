@@ -1,0 +1,133 @@
+.search__modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+
+  color: white;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+}
+
+.search__overlay {
+  background-color: rgb(0, 128, 0, 1);
+  mix-blend-mode: multiply;
+  backdrop-filter: blur(25px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 160;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+}
+
+.search.active {
+  & .search__modal {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  & .search__overlay {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+}
+.search__inner {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+.search__close {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: auto;
+
+  & svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: white;
+    transition: fill 0.2s;
+  }
+}
+
+.search__form {
+  display: flex;
+  border-bottom: 0.4rem solid #ffffff;
+  gap: 2rem;
+  margin-top: 30rem;
+  align-items: center;
+}
+
+.search__form-input {
+  width: 50%;
+  flex-grow: 1;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 4.5rem;
+  color: white;
+}
+
+.search__form-clear {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+
+  & svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: white;
+  }
+}
+
+.search__form-submit {
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+
+  & svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: white;
+  }
+}
+
+.search__results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+  margin-top: 3rem;
+}
+
+.search__results-link {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.2;
+}

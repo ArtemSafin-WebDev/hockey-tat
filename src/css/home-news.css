@@ -1,0 +1,25 @@
+.home-news {
+  margin-bottom: 12rem;
+  margin-top: -11rem;
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+}
+
+.home-news__content {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+}
+
+.home-news__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 4rem;
+}
+
+.home-news__list-item {
+  display: flex;
+  flex-direction: column;
+}

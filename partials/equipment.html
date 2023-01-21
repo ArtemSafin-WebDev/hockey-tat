@@ -1,0 +1,56 @@
+<section class="equipment">
+    <div class="equipment__inner">
+        <h2 class="equipment__heading" data-text="Хоккейная экипировка">
+            Хоккейная экипировка
+        </h2>
+        <a href="#" class="equipment__shop-link">
+            Перейти в магазин
+            <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#arrow-right"></use>
+            </svg>
+        </a>
+        <div class="equipment__slider js-equipment-slider">
+            <button class="equipment__slider-arrow equipment__slider-arrow--prev">
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#arrow-left"></use>
+                </svg>
+            </button>
+            <div class="equipment__slider-inner">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        {{#each equipment}}
+                            <div class="swiper-slide">
+                                <a href="#" class="equipment__slider-card">
+                                    <div class="equipment__slider-card-image-container">
+                                        <img src="{{ src }}" alt="" class="equipment__slider-card-image">
+                                    </div>
+                                    <div class="equipment__slider-card-content">
+                                        <div class="equipment__slider-card-price">
+                                            {{ price }}
+                                        </div>
+                                        <div class="equipment__slider-card-desc">
+                                            {{ desc }}
+                                        </div>
+                                        <div class="equipment__slider-card-btn">
+                                            <span class="equipment__slider-card-btn-text">
+                                                Купить
+                                            </span>
+                                            <span class="equipment__slider-card-btn-text">
+                                                В магазин
+                                            </span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <button class="equipment__slider-arrow equipment__slider-arrow--next">
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>

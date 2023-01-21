@@ -1,0 +1,7 @@
+:root {
+  --container-width: 116rem;
+  --content-padding: 4rem;
+  --primary-color: #008000;
+  --text-color: #19251e;
+  --roboto-condensed: "Roboto Condensed", sans-serif;
+}

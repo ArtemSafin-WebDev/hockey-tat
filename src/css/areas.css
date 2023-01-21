@@ -1,0 +1,137 @@
+.areas {
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+
+.areas__ticker {
+  grid-column-start: main-start;
+  grid-column-end: main-end;
+  display: flex;
+  overflow: hidden;
+}
+
+.areas__ticker-inner {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26rem;
+  line-height: 1;
+  color: #ebebeb;
+
+  white-space: nowrap;
+  animation: ticker 15s infinite linear;
+  flex-shrink: 0;
+  width: auto;
+  box-sizing: border-box;
+  @media (--laptop) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.5rem;
+  }
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.areas__content {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 4rem;
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  align-items: center;
+}
+
+.areas__bg {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.areas__bg-image {
+  width: 72rem;
+  height: auto;
+}
+
+.areas__image-wrapper {
+  grid-column: 1 / 7;
+  grid-row: 1 / 2;
+  margin-left: -4rem;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100rem;
+    height: 70rem;
+    background-image: url("/areas-blur.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    top: -10rem;
+    left: -30rem;
+  }
+}
+
+.areas__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.areas__text-content {
+  grid-column: 7 / -1;
+  grid-row: 1 / 2;
+  padding: 6rem 0;
+  z-index: 3;
+}
+
+.areas__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9rem;
+  line-height: 8rem;
+  margin-bottom: 2rem;
+}
+
+.areas__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: #949891;
+  margin-bottom: 5rem;
+  max-width: 39rem;
+}
+
+.areas__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 1rem 3.5rem;
+
+  &:link,
+  &:visited {
+    color: white;
+  }
+}

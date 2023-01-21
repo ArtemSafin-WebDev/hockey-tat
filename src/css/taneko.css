@@ -1,0 +1,20 @@
+.taneko {
+  margin-bottom: 12rem;
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+}
+
+.taneko__image-wrapper {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  display: block;
+}
+
+.taneko__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}

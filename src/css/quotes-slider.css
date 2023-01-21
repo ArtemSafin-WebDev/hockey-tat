@@ -1,0 +1,228 @@
+.quotes-slider {
+  padding-top: 10rem;
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.quotes-slider__bg {
+  position: absolute;
+  inset: 0;
+  top: 10rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 54.3rem;
+    height: 42.1rem;
+    top: -3.2rem;
+    background-image: url("/quotes.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 5;
+    pointer-events: none;
+  }
+}
+
+.quotes-slider__bg-image-wrapper {
+  position: absolute;
+  inset: 0;
+
+  &::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-image: linear-gradient(0deg, #008000, #008000);
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  &::after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    background-image: linear-gradient(
+      98.31deg,
+      rgba(0, 128, 0, 0.92) 10.52%,
+      rgba(35, 61, 61, 0.92) 79.6%
+    );
+    z-index: 1;
+  }
+}
+
+.quotes-slider__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quotes-slider__content {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+  position: relative;
+
+  & .swiper {
+    padding-top: 8rem;
+    margin-top: -8rem;
+  }
+}
+
+.quotes-slider__card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.quotes-slider__card-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 6rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.quotes-slider__card-image-wrapper {
+  z-index: 3;
+  margin-left: -6rem;
+  margin-top: -2rem;
+}
+
+.quotes-slider__card-quote-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  padding: 4rem;
+  border: 1px solid #ffffff;
+  position: relative;
+  margin-bottom: 4rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    width: 17.65rem;
+    height: 11.225rem;
+    background-image: url("/quotes-line.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.quotes-slider__card-quote-author {
+  display: flex;
+  flex-direction: column;
+  padding-left: 4rem;
+  gap: 1rem;
+}
+
+.quotes-slider__card-quote-author-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+.quotes-slider__card-quote-author-role {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+
+.quotes-slider__pagination {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  counter-reset: ordered-list;
+  position: absolute;
+  left: 10rem;
+  bottom: 10rem;
+  z-index: 20;
+}
+
+.quotes-slider__pagination-bullet {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  counter-increment: ordered-list;
+  &.active {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  @media (hover: hover) {
+    &:not(.active):hover {
+      & .quotes-slider__pagination-bullet-dot {
+        background-color: #ff0000;
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+.quotes-slider__pagination-bullet-timer {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  display: grid;
+  place-items: center;
+  transition: opacity 0.2s;
+  opacity: 0;
+  & svg {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.quotes-slider__pagination-bullet.active
+  .quotes-slider__pagination-bullet-timer {
+  opacity: 1;
+}
+
+.quotes-slider__pagination-bullet-timer-number {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: white;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  z-index: 1;
+  display: grid;
+  text-align: center;
+  place-items: center;
+  &::before {
+    content: counter(ordered-list, decimal-leading-zero);
+  }
+}
+
+.quotes-slider__pagination-bullet-dot {
+  background: white;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  transition: background-color 0.2s, opacity 0.2s, transform 0.2s;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.quotes-slider__pagination-bullet.active .quotes-slider__pagination-bullet-dot {
+  opacity: 0;
+}

@@ -1,0 +1,71 @@
+<section class="news-slider js-news-slider">
+    <div class="news-slider__content">
+        <div class="news-slider__inner">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {{#times 5}}
+                        <div class="swiper-slide">
+                            <div class="news-slider__card">
+                                <div class="news-slider__card-image-container">
+                                    <img src="/news-slider.jpg" alt="" class="news-slider__card-image">
+                                </div>
+                                <div class="news-slider__card-content">
+                                    <div class="news-slider__card-tags">
+                                        <div class="news-slider__card-tag">
+                                            Матч
+                                        </div>
+                                    </div>
+                                    <div class="news-slider__card-date">
+                                        16.11.2023
+                                    </div>
+                                    <h3 class="news-slider__card-title">
+                                        Очередная победа: «Ак Барс» движется вверх по турнирной таблице КХЛ
+                                    </h3>
+                                    <div class="news-slider__card-desc">
+                                        В последнем матче регулярного чемпионата «барсы» дома обыграли «Локомотив»
+                                        (3:2).
+                                        Голы у
+                                        казанцев на счету...
+                                    </div>
+                                    <a href="#" class="news-slider__card-more">
+                                        Узнать больше
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {{/times}}
+                </div>
+            </div>
+        </div>
+        <div class="news-slider__controls">
+            <ol class="news-slider__pagination">
+                {{#times 5}}
+                    <li class="news-slider__pagination-bullet">
+                        <div class="news-slider__pagination-bullet-dot">
+
+                        </div>
+                        <div class="news-slider__pagination-bullet-timer">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" stroke-width="1" stroke="#D1D6CF" fill="none"
+                                    vector-effect="non-scaling-stroke" />
+                            </svg>
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" stroke-width="1" stroke="#008000" fill="none"
+                                    vector-effect="non-scaling-stroke" />
+                            </svg>
+                            <div class="news-slider__pagination-bullet-timer-number">
+
+                            </div>
+                        </div>
+                    </li>
+                {{/times}}
+            </ol>
+            <a href="#" class="news-slider__all-news">
+                Все новости
+            </a>
+        </div>
+    </div>
+</section>
