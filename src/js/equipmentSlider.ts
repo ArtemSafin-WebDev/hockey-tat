@@ -13,9 +13,11 @@ function equipmentSlider(selector: string = ".js-equipment-slider"): void {
     if (container) {
       new Swiper(container, {
         modules: [Navigation],
-        slidesPerView: 4,
-        spaceBetween: 28,
+        slidesPerView: "auto",
+        spaceBetween: 0,
         speed: 600,
+        centeredSlides: true,
+        centeredSlidesBounds: false,
         navigation: {
           nextEl: element.querySelector<HTMLButtonElement>(
             ".equipment__slider-arrow--next"
@@ -23,6 +25,13 @@ function equipmentSlider(selector: string = ".js-equipment-slider"): void {
           prevEl: element.querySelector<HTMLButtonElement>(
             ".equipment__slider-arrow--prev"
           ),
+        },
+        breakpoints: {
+          641: {
+            slidesPerView: 4,
+            spaceBetween: 28,
+            centeredSlides: false,
+          },
         },
       });
     }

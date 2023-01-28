@@ -13,9 +13,12 @@ function calendarSlider(selector: string = ".js-calendar-slider"): void {
     if (container !== null) {
       new Swiper(container, {
         modules: [Navigation],
-        slidesPerView: 8,
+        slidesPerView: 1,
         speed: 600,
         breakpoints: {
+          641: {
+            slidesPerView: 8,
+          },
           1500: {
             slidesPerView: 10,
           },

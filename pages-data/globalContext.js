@@ -1,7 +1,7 @@
 const globalContext = {
   headerCalendar: [
     {
-      date: "16<br>ноя",
+      date: "16<br> ноя",
       matches: {
         text: "4 матча",
       },
@@ -10,7 +10,7 @@ const globalContext = {
       },
     },
     {
-      date: "17<br>ноя",
+      date: "17<br> ноя",
       matches: {
         text: "9 матчей",
       },
@@ -20,7 +20,7 @@ const globalContext = {
       },
     },
     {
-      date: "18<br>ноя",
+      date: "18<br> ноя",
       matches: {
         text: "Матчей нет",
         disabled: true,
@@ -30,7 +30,7 @@ const globalContext = {
       },
     },
     {
-      date: "19<br>ноя",
+      date: "19<br> ноя",
       matches: {
         text: "4 матча",
       },
@@ -39,7 +39,7 @@ const globalContext = {
       },
     },
     {
-      date: "20<br>ноя",
+      date: "20<br> ноя",
       matches: {
         text: "4 матча",
       },
@@ -48,7 +48,7 @@ const globalContext = {
       },
     },
     {
-      date: "21<br>ноя",
+      date: "21<br> ноя",
       matches: {
         text: "9 матчей",
       },
@@ -58,7 +58,7 @@ const globalContext = {
       },
     },
     {
-      date: "22<br>ноя",
+      date: "22<br> ноя",
       matches: {
         text: "Матчей нет",
         disabled: true,
@@ -68,7 +68,7 @@ const globalContext = {
       },
     },
     {
-      date: "23<br>ноя",
+      date: "23<br> ноя",
       matches: {
         text: "Матчей нет",
         disabled: true,
@@ -78,7 +78,7 @@ const globalContext = {
       },
     },
     {
-      date: "24<br>ноя",
+      date: "24<br> ноя",
       matches: {
         text: "4 матча",
       },
@@ -87,7 +87,7 @@ const globalContext = {
       },
     },
     {
-      date: "25<br>ноя",
+      date: "25<br> ноя",
       matches: {
         text: "Матчей нет",
         disabled: true,
@@ -97,7 +97,7 @@ const globalContext = {
       },
     },
     {
-      date: "26<br>ноя",
+      date: "26<br> ноя",
       matches: {
         text: "Матчей нет",
         disabled: true,
@@ -107,7 +107,7 @@ const globalContext = {
       },
     },
     {
-      date: "27<br>ноя",
+      date: "27<br> ноя",
       matches: {
         text: "Матчей нет",
         disabled: true,
@@ -117,7 +117,7 @@ const globalContext = {
       },
     },
     {
-      date: "28<br>ноя",
+      date: "28<br> ноя",
       matches: {
         text: "Матчей нет",
         disabled: true,
@@ -127,7 +127,7 @@ const globalContext = {
       },
     },
     {
-      date: "29<br>ноя",
+      date: "29<br> ноя",
       matches: {
         text: "Матчей нет",
         disabled: true,
@@ -137,7 +137,7 @@ const globalContext = {
       },
     },
     {
-      date: "30<br>ноя",
+      date: "30<br> ноя",
       matches: {
         text: "Матчей нет",
         disabled: true,
@@ -147,7 +147,7 @@ const globalContext = {
       },
     },
     {
-      date: "31<br>ноя",
+      date: "31<br> ноя",
       matches: {
         text: "Матчей нет",
         disabled: true,

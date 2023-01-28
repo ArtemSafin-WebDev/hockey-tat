@@ -6,6 +6,12 @@
     [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
     [content-end] 1fr [main-end];
   grid-gap: var(--content-padding, 0);
+
+  @media (--mobile) {
+    padding: 6rem 0;
+    padding-top: 7.4rem;
+    overflow: hidden;
+  }
 }
 
 .equipment__inner {
@@ -42,6 +48,29 @@
     text-stroke: 1px #949891;
     pointer-events: none;
   }
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    white-space: normal;
+    padding: 0 2em;
+    &::before {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 4rem;
+      line-height: 4.7rem;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      width: 100vw;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.1;
+    }
+  }
 }
 
 .equipment__shop-link {
@@ -70,27 +99,45 @@
 }
 
 .equipment__slider {
-  margin-top: 7.2rem;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-
   & .swiper-slide {
     display: flex;
     flex-direction: column;
     height: auto;
   }
+  @media (--desktop) {
+    margin-top: 7.2rem;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
 
-  & .swiper {
-    margin: -8rem -2.5rem;
-    padding: 8rem 2.5rem;
-    width: auto;
-    mask-image: linear-gradient(
-      to right,
-      transparent 0%,
-      black 2rem,
-      black calc(100% - 2rem),
-      transparent 100%
-    );
+    & .swiper {
+      margin: -8rem -2.5rem;
+      padding: 8rem 2.5rem;
+      width: auto;
+      mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 2rem,
+        black calc(100% - 2rem),
+        transparent 100%
+      );
+    }
+  }
+
+  @media (--mobile) {
+    margin-top: 3rem;
+
+    & .swiper {
+      overflow: visible;
+    }
+
+    & .swiper-slide {
+      width: 28rem;
+      margin-right: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
 
@@ -102,6 +149,10 @@
   align-self: center;
   background-color: #fff;
   transition: background-color 0.2s;
+
+  @media (--mobile) {
+    display: none;
+  }
   &.swiper-button-disabled {
     cursor: default;
     & svg {
@@ -139,8 +190,10 @@
 }
 
 .equipment__slider-inner {
-  grid-column: 2 / 12;
-  margin: 0 -4rem;
+  @media (--desktop) {
+    grid-column: 2 / 12;
+    margin: 0 -4rem;
+  }
 }
 
 .equipment__slider-card {

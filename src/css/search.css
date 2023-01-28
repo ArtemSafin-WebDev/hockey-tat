@@ -21,9 +21,10 @@
 }
 
 .search__overlay {
-  background-color: rgb(0, 128, 0, 1);
-  mix-blend-mode: multiply;
-  backdrop-filter: blur(25px);
+  background-color: rgba(0, 111, 0, 0.869);
+
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   position: fixed;
   left: 0;
   top: 0;
@@ -75,6 +76,10 @@
   gap: 2rem;
   margin-top: 30rem;
   align-items: center;
+
+  @media (--mobile) {
+    margin-top: 7rem;
+  }
 }
 
 .search__form-input {
@@ -122,6 +127,10 @@
   gap: 2rem;
   padding: 0 2rem;
   margin-top: 3rem;
+
+  @media (--mobile) {
+    padding: 0;
+  }
 }
 
 .search__results-link {

@@ -8,6 +8,11 @@
   position: relative;
   z-index: 1;
   color: white;
+
+  @media (--mobile) {
+    padding-top: 4rem;
+    overflow: hidden;
+  }
 }
 
 .quotes-slider__bg {
@@ -29,6 +34,19 @@
     background-position: center;
     z-index: 5;
     pointer-events: none;
+  }
+
+  @media (--mobile) {
+    top: 0;
+
+    &::after {
+      width: 28.4rem;
+      height: 22.1rem;
+      top: -2.8rem;
+      transform: none;
+      left: auto;
+      right: -5.4rem;
+    }
   }
 }
 
@@ -72,29 +90,69 @@
   grid-column-end: content-end;
   position: relative;
 
-  & .swiper {
-    padding-top: 8rem;
-    margin-top: -8rem;
+  @media (--desktop) {
+    & .swiper {
+      padding-top: 8rem;
+      margin-top: -8rem;
+    }
+  }
+
+  @media (--mobile) {
+    & .swiper {
+      margin: 0 calc(-1 * var(--content-padding));
+      width: auto;
+      padding: 0 var(--content-padding);
+    }
   }
 }
 
 .quotes-slider__card {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  @media (--desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .quotes-slider__card-content {
   display: flex;
   flex-direction: column;
-  padding-left: 6rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+
+  @media (--desktop) {
+    padding-left: 6rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
 }
 
 .quotes-slider__card-image-wrapper {
-  z-index: 3;
-  margin-left: -6rem;
-  margin-top: -2rem;
+  @media (--desktop) {
+    z-index: 3;
+    margin-left: -6rem;
+    margin-top: -2rem;
+  }
+
+  @media (--mobile) {
+    margin-left: auto;
+    margin-right: -10rem;
+    margin-top: -10rem;
+  }
+}
+
+.quotes-slider__card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @media (--mobile) {
+    height: 36rem;
+    width: auto;
+    max-width: none;
+  }
 }
 
 .quotes-slider__card-quote-text {
@@ -119,6 +177,18 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  @media (--mobile) {
+    padding: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .quotes-slider__card-quote-author {
@@ -126,6 +196,11 @@
   flex-direction: column;
   padding-left: 4rem;
   gap: 1rem;
+
+  @media (--mobile) {
+    padding-left: 0;
+    gap: 2rem;
+  }
 }
 
 .quotes-slider__card-quote-author-name {
@@ -133,6 +208,16 @@
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 3rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    max-width: 15rem;
+  }
 }
 
 .quotes-slider__card-quote-author-role {
@@ -140,6 +225,13 @@
   font-weight: 300;
   font-size: 1.8rem;
   line-height: 2.7rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
 }
 
 .quotes-slider__pagination {
@@ -151,6 +243,11 @@
   left: 10rem;
   bottom: 10rem;
   z-index: 20;
+
+  @media (--mobile) {
+    left: 0;
+    bottom: 18rem;
+  }
 }
 
 .quotes-slider__pagination-bullet {

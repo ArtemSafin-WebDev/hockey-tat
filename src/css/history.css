@@ -7,6 +7,11 @@
   overflow: hidden;
   padding-top: 15rem;
   padding-bottom: 15rem;
+
+  @media (--mobile) {
+    padding: 6rem 0;
+    overflow: hidden;
+  }
 }
 
 .history__ticker {
@@ -14,6 +19,7 @@
   grid-column-end: main-end;
   display: flex;
   margin-bottom: 3rem;
+  user-select: none;
 }
 
 .history__ticker-inner {
@@ -32,31 +38,62 @@
     font-weight: 400;
     font-size: 19.5rem;
   }
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7rem;
+    line-height: 8rem;
+  }
 }
 
 .history__content {
   grid-column-start: content-start;
   grid-column-end: content-end;
+
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 .history__top-row {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-gap: 4rem;
+  @media (--desktop) {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 4rem;
+  }
+
+  @media (--mobile) {
+    display: contents;
+  }
 }
 
 .history__left-col {
-  grid-column: 3 / 8;
-  margin-left: -4rem;
   display: flex;
   flex-direction: column;
+
+  @media (--desktop) {
+    grid-column: 3 / 8;
+    margin-left: -4rem;
+  }
+  @media (--mobile) {
+    display: contents;
+  }
 }
 
 .history__right-col {
-  grid-column: 8 / -1;
-  margin-left: -4rem;
   display: flex;
   flex-direction: column;
+
+  @media (--desktop) {
+    grid-column: 8 / -1;
+    margin-left: -4rem;
+  }
+  @media (--mobile) {
+    display: contents;
+  }
 }
 
 .history__heading {
@@ -65,6 +102,14 @@
   font-size: 9rem;
   line-height: 8rem;
   margin-bottom: 6rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    margin-bottom: 0;
+  }
 }
 
 .history__link {
@@ -84,9 +129,17 @@
   &:visited {
     color: white;
   }
+
+  @media (--mobile) {
+    order: 10;
+    align-self: stretch;
+  }
 }
 
 .history__right-col {
+  @media (--mobile) {
+    display: contents;
+  }
 }
 
 .history__text {
@@ -95,6 +148,10 @@
   font-size: 1.8rem;
   line-height: 2.7rem;
   max-width: 44rem;
+
+  @media (--mobile) {
+    max-width: none;
+  }
 }
 
 .history__photos {
@@ -102,6 +159,15 @@
   margin-top: -6rem;
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
+
+  @media (--mobile) {
+    margin: 0;
+    width: 67.6rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 4rem;
+  }
 }
 
 .history__photos-card {

@@ -3,8 +3,23 @@ import { resolve } from "path";
 import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import pagesConfig from "./pages.config";
 import globalContext from "./pages-data/globalContext";
+import path from "path";
+import glob from "glob";
 
 export default {
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/[name].js`,
+        chunkFileNames: `assets/[name].js`,
+        assetFileNames: `assets/[name].[ext]`,
+      },
+      input: glob.sync(path.resolve(__dirname, "*.html")),
+    },
+  },
+  server: {
+    host: true,
+  },
   plugins: [
     createSvgIconsPlugin({
       iconDirs: [resolve(process.cwd(), "src/icons")],

@@ -6,20 +6,47 @@
         <h2 class="achivements__heading" data-text="Достижения Республики">
             Достижения Республики
         </h2>
-        <ul class="achivements__list">
-            {{#each achivements}}
-                <li class="achivements__list-item">
-                    <div class="achivements__card">
-                        <div class="achivements__card-amount">
-                            {{ amount }}
+        <div class="achivements__cards-slider js-achivements-cards-slider">
+            <div class="swiper">
+                <ul class="swiper-wrapper achivements__list">
+                    {{#each achivements}}
+                        <li class="swiper-slide achivements__list-item">
+                            <div class="achivements__card">
+                                <div class="achivements__card-amount">
+                                    {{ amount }}
+                                </div>
+                                <h3 class="achivements__card-title">
+                                    {{ title }}
+                                </h3>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <ol class="achivements__cards-slider-pagination">
+                {{#each achivements}}
+                    <li class="achivements__cards-slider-pagination-bullet">
+                        <div class="achivements__cards-slider-pagination-bullet-dot">
+
                         </div>
-                        <h3 class="achivements__card-title">
-                            {{ title }}
-                        </h3>
-                    </div>
-                </li>
-            {{/each}}
-        </ul>
+                        <div class="achivements__cards-slider-pagination-bullet-timer">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" stroke-width="1" stroke="#FF0000" fill="none"
+                                    vector-effect="non-scaling-stroke" />
+                            </svg>
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" stroke-width="1" stroke="#FFFFFF" fill="none"
+                                    vector-effect="non-scaling-stroke" />
+                            </svg>
+                            <div class="achivements__cards-slider-pagination-bullet-timer-number">
+
+                            </div>
+                        </div>
+                    </li>
+                {{/each}}
+            </ol>
+        </div>
+
     </div>
     <div class="achivements__leagues-wrapper">
         <div class="achivements__leagues">
@@ -99,23 +126,31 @@
                                                                             </svg>
                                                                         </a>
                                                                     </div>
-                                                                    <h3
-                                                                        class="achivements__leagues-team-slider-card-heading">
-                                                                        Кубок Гагарина – 2009, 2010, 2018
-                                                                    </h3>
                                                                     <div
-                                                                        class="achivements__leagues-team-slider-card-text">
-                                                                        «Ак Барс» – единственный в истории трёхкратный
-                                                                        обладатель
-                                                                        главного трофея КХЛ. В первом сезоне в финале
-                                                                        был
-                                                                        обыгран
-                                                                        «Локомотив», на следующий год – ХК МВД. Третий
-                                                                        Кубок
-                                                                        «Ак
-                                                                        Барс»
-                                                                        завоевал в сезоне 2017/18, победив в финале
-                                                                        ЦСКА.
+                                                                        class="achivements__leagues-team-slider-card-text-content">
+
+
+                                                                        <h3
+                                                                            class="achivements__leagues-team-slider-card-heading">
+                                                                            Кубок Гагарина – 2009, 2010, 2018
+                                                                        </h3>
+                                                                        <div
+                                                                            class="achivements__leagues-team-slider-card-text">
+                                                                            «Ак Барс» – единственный в истории
+                                                                            трёхкратный
+                                                                            обладатель
+                                                                            главного трофея КХЛ. В первом сезоне в
+                                                                            финале
+                                                                            был
+                                                                            обыгран
+                                                                            «Локомотив», на следующий год – ХК МВД.
+                                                                            Третий
+                                                                            Кубок
+                                                                            «Ак
+                                                                            Барс»
+                                                                            завоевал в сезоне 2017/18, победив в финале
+                                                                            ЦСКА.
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                                 <div

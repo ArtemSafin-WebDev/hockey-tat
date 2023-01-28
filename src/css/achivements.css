@@ -5,6 +5,30 @@
     [content-end] 1fr [main-end];
   grid-gap: var(--content-padding, 0);
   color: white;
+
+  @media (--mobile) {
+    overflow-x: hidden;
+    row-gap: 0;
+  }
+}
+
+.achivements__cards-slider {
+  & .swiper {
+    overflow: visible;
+  }
+
+  & .swiper-slide {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (--mobile) {
+    & .swiper-slide {
+      width: 20rem;
+      margin: 0 0.5rem;
+    }
+  }
 }
 
 .achivements__bg {
@@ -49,12 +73,18 @@
   padding-top: 12rem;
   padding-bottom: 25.5rem;
   z-index: 2;
+
+  @media (--mobile) {
+    padding: 5.4rem 0;
+  }
 }
 
 .achivements__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 15rem));
-  grid-gap: 4rem;
+  @media (--desktop) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 15rem));
+    grid-gap: 4rem;
+  }
 }
 
 .achivements__card {
@@ -62,6 +92,20 @@
   flex-direction: column;
   text-align: center;
   gap: 2rem;
+
+  @media (--mobile) {
+    gap: 2rem;
+    transition: opacity 0.4s, filter 0.4s, transform 0.4s;
+  }
+}
+
+.swiper-slide-prev .achivements__card,
+.swiper-slide-next .achivements__card {
+  @media (--mobile) {
+    opacity: 0.3;
+    filter: blur(1px);
+    transform: 0.9;
+  }
 }
 
 .achivements__card-amount {
@@ -74,6 +118,17 @@
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10rem;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
 
 .achivements__card-title {
@@ -83,6 +138,10 @@
   line-height: 1.8rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  @media (--mobile) {
+    padding: 0 0.3em;
+    text-align: center;
+  }
 }
 
 .achivements__heading {
@@ -112,23 +171,54 @@
     -webkit-text-stroke: 1px white;
     pointer-events: none;
   }
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    padding: 0 0.5em;
+    white-space: normal;
+    margin-bottom: 4rem;
+    &::before {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 4rem;
+      line-height: 4.7rem;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      opacity: 0.1;
+    }
+  }
 }
 
 .achivements__leagues-wrapper {
-  margin-top: -18.5rem;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-gap: 4rem;
-  grid-column-start: content-start;
-  grid-column-end: content-end;
-  z-index: 5;
+  @media (--desktop) {
+    margin-top: -18.5rem;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 4rem;
+    grid-column-start: content-start;
+    grid-column-end: content-end;
+    z-index: 5;
+  }
+
+  @media (--mobile) {
+    grid-column-start: main-start;
+    grid-column-end: main-end;
+    grid-row: 2 / 3;
+  }
 }
 
 .achivements__leagues {
   display: flex;
   flex-direction: column;
-  margin: 0 -4rem;
-  grid-column: 2 / 12;
+
+  @media (--desktop) {
+    margin: 0 -4rem;
+    grid-column: 2 / 12;
+  }
 }
 
 .achivements__leagues-tabs {
@@ -141,6 +231,14 @@
   align-items: center;
   flex-wrap: wrap;
   margin-left: auto;
+
+  @media (--mobile) {
+    flex-wrap: nowrap;
+    margin: 0;
+    /* width: 100%; */
+    width: auto;
+    overflow-y: hidden;
+  }
 }
 
 .achivements__leagues-tabs-nav-link {
@@ -160,6 +258,7 @@
   white-space: nowrap;
   user-select: none;
   padding: 1.1rem 2.4rem;
+  flex-shrink: 0;
   &:link,
   &:visited {
     color: white;
@@ -207,7 +306,10 @@
 .achivements__leagues-team-slider {
   background-color: #fff;
   position: relative;
-  box-shadow: 0px 2rem 6rem rgba(0, 40, 9, 0.1);
+
+  @media (--desktop) {
+    box-shadow: 0px 2rem 6rem rgba(0, 40, 9, 0.1);
+  }
 }
 
 .achivements__leagues-team-slider-card {
@@ -215,14 +317,30 @@
   padding: 6rem;
   display: flex;
   gap: 4rem;
+
+  @media (--mobile) {
+    flex-direction: column;
+    display: flex;
+    gap: 0;
+    padding: 0;
+    padding-top: 4rem;
+  }
 }
 
 .achivements__leagues-team-slider-card-logo-wrapper {
   width: 6rem;
   flex-shrink: 0;
-  margin-left: -2rem;
-  margin-top: -1rem;
-  align-self: flex-start;
+
+  @media (--desktop) {
+    margin-left: -2rem;
+    margin-top: -1rem;
+    align-self: flex-start;
+  }
+
+  @media (--mobile) {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
 }
 
 .achivements__leagues-team-slider-logo {
@@ -233,10 +351,16 @@
 }
 
 .achivements__leagues-team-slider-card-main-content {
-  width: 20%;
-  flex-grow: 1;
-  padding-bottom: 3rem;
-  padding-top: 1rem;
+  @media (--desktop) {
+    width: 20%;
+    flex-grow: 1;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+  }
+
+  @media (--mobile) {
+    display: contents;
+  }
 }
 
 .achivements__leagues-team-slider-card-top-row {
@@ -244,11 +368,20 @@
   align-items: center;
   gap: 3rem;
   margin-bottom: 4.5rem;
+
+  @media (--mobile) {
+    display: contents;
+  }
 }
 
 .achivements__leagues-team-slider-card-selector {
   flex-shrink: 0;
   position: relative;
+
+  @media (--mobile) {
+    align-self: center;
+    margin-bottom: 2rem;
+  }
 }
 
 .achivements__leagues-team-slider-card-selector-btn {
@@ -289,6 +422,13 @@
   transition: opacity 0.4s, visibility 0s linear 0.4s;
   z-index: 20;
   margin-left: -1.7rem;
+
+  @media (--mobile) {
+    margin-left: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 80vw;
+  }
 }
 
 .achivements__leagues-team-slider-card-selector.active
@@ -349,6 +489,10 @@
     fill: #ff0000;
     margin-top: 0.18em;
   }
+
+  @media (--mobile) {
+    display: none;
+  }
 }
 
 .achivements__leagues-team-slider-card-heading {
@@ -358,6 +502,10 @@
   line-height: 3rem;
   margin-bottom: 1.9rem;
   color: #19251e;
+
+  @media (--mobile) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .achivements__leagues-team-slider-card-text {
@@ -372,6 +520,25 @@
   aspect-ratio: 1 / 1;
   position: relative;
   width: 32rem;
+
+  @media (--mobile) {
+    width: 14rem;
+    align-self: center;
+    margin-bottom: -7rem;
+  }
+}
+
+.achivements__leagues-team-slider-card-text-content {
+  display: contents;
+
+  @media (--mobile) {
+    order: 12;
+    display: block;
+    padding: 0 var(--content-padding);
+    background: #f3f3f3;
+    padding-top: 8.8rem;
+    padding-bottom: 4rem;
+  }
 }
 
 .achivements__leagues-team-slider-card-award-image {
@@ -383,7 +550,8 @@
   object-fit: contain;
 }
 
-.achivements__leagues-team-slider-pagination {
+.achivements__leagues-team-slider-pagination,
+.achivements__cards-slider-pagination {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -394,7 +562,28 @@
   bottom: 6rem;
 }
 
-.achivements__leagues-team-slider-pagination-bullet {
+.achivements__leagues-team-slider-pagination {
+  @media (--mobile) {
+    position: static;
+    padding: 0 var(--content-padding);
+    padding-bottom: 4rem;
+    background: #f3f3f3;
+  }
+}
+
+.achivements__cards-slider-pagination {
+  display: none;
+
+  @media (--mobile) {
+    display: flex;
+    position: static;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+}
+
+.achivements__leagues-team-slider-pagination-bullet,
+.achivements__cards-slider-pagination-bullet {
   width: 2.4rem;
   height: 2.4rem;
   display: inline-grid;
@@ -412,11 +601,17 @@
         background-color: var(--primary-color);
         transform: scale(1.5);
       }
+
+      & .achivements__cards-slider-pagination-bullet-dot {
+        background-color: white;
+        transform: scale(1.5);
+      }
     }
   }
 }
 
-.achivements__leagues-team-slider-pagination-bullet-timer {
+.achivements__leagues-team-slider-pagination-bullet-timer,
+.achivements__cards-slider-pagination-bullet-timer {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 
@@ -436,8 +631,13 @@
   .achivements__leagues-team-slider-pagination-bullet-timer {
   opacity: 1;
 }
+.achivements__cards-slider-pagination-bullet.active
+  .achivements__cards-slider-pagination-bullet-timer {
+  opacity: 1;
+}
 
-.achivements__leagues-team-slider-pagination-bullet-timer-number {
+.achivements__leagues-team-slider-pagination-bullet-timer-number,
+.achivements__cards-slider-pagination-bullet-timer-number {
   font-style: normal;
   font-weight: 300;
   font-size: 1.2rem;
@@ -454,7 +654,12 @@
   }
 }
 
-.achivements__leagues-team-slider-pagination-bullet-dot {
+.achivements__cards-slider-pagination-bullet-timer-number {
+  color: white;
+}
+
+.achivements__leagues-team-slider-pagination-bullet-dot,
+.achivements__cards-slider-pagination-bullet-dot {
   background: #d1d6cf;
   width: 0.6rem;
   height: 0.6rem;
@@ -466,5 +671,9 @@
 
 .achivements__leagues-team-slider-pagination-bullet.active
   .achivements__leagues-team-slider-pagination-bullet-dot {
+  opacity: 0;
+}
+.achivements__cards-slider-pagination-bullet.active
+  .achivements__cards-slider-pagination-bullet-dot {
   opacity: 0;
 }

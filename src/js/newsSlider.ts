@@ -70,8 +70,13 @@ function newsSlider(
         fadeEffect: {
           crossFade: true,
         },
+        autoHeight: true,
         loop: true,
-
+        breakpoints: {
+          641: {
+            autoHeight: false,
+          },
+        },
         on: {
           init: (swiper) => {
             autoplayAtIndex(swiper.realIndex);

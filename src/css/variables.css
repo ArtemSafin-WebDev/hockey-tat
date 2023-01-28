@@ -4,4 +4,8 @@
   --primary-color: #008000;
   --text-color: #19251e;
   --roboto-condensed: "Roboto Condensed", sans-serif;
+
+  @media (--mobile) {
+    --content-padding: 2rem;
+  }
 }
