@@ -135,7 +135,7 @@
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  padding-bottom: 7rem;
+  padding-bottom: 9.5rem;
 
   @media (--mobile) {
     padding: 2rem var(--content-padding);
