@@ -29,7 +29,6 @@
   line-height: 1;
   color: #ebebeb;
   white-space: nowrap;
-  animation: ticker 15s infinite linear;
   flex-shrink: 0;
   width: auto;
   box-sizing: border-box;
