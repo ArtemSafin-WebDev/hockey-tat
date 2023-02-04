@@ -1,0 +1,71 @@
+.veteran-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: #f8f4f0;
+  box-shadow: 0px 2rem 6rem rgba(0, 40, 9, 0.1);
+}
+
+.veteran-card__image-container {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  @media (--mobile) {
+    &::before {
+      padding-bottom: 111%;
+    }
+  }
+}
+
+.veteran-card__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.veteran-card__content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.veteran-card__name {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.veteran-card__first-name {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+.veteran-card__date {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #4e524e;
+  margin-bottom: 2rem;
+}
+
+.veteran-card__role {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  margin-top: auto;
+  color: #949891;
+}

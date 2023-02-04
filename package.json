@@ -25,6 +25,7 @@
     "vite-plugin-svg-icons": "^2.0.1"
   },
   "dependencies": {
+    "air-datepicker": "^3.3.5",
     "body-scroll-lock": "^3.1.5",
     "gsap": "^3.11.4",
     "swiper": "^8.4.5"

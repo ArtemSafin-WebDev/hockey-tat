@@ -1,0 +1,216 @@
+<section class="news-catalog">
+    <div class="news-catalog__top">
+        <div class="news-catalog__top-inner">
+
+
+            <h1 class="news-catalog__heading" data-text="Новости">
+                Новости
+            </h1>
+            <div class="news-catalog__filters">
+                <form action="/" method="GET" class="news-catalog__filters-form">
+                    <div class="news-catalog__filters-form-fields">
+                        <div class="news-catalog__filters-form-field">
+                            <div class="news-catalog__filters-search">
+                                <div class="news-catalog__filters-search-input-wrapper">
+                                    <input type="search" name="s" class="news-catalog__filters-search-input"
+                                        placeholder="Поиск по новостям и тегам">
+                                    <button class="news-catalog__filters-search-close-btn" type="button">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#cross"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="news-catalog__filters-search-btn">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#search"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="news-catalog__filters-search-dropdown">
+                                        <div class="news-catalog__filters-search-dropdown-inner">
+                                            <ul class="news-catalog__filters-search-dropdown-list">
+                                                <li class="news-catalog__filters-search-dropdown-list-item">
+                                                    <a href="#" class="news-catalog__filters-search-dropdown-link">
+                                                        Ак Буре
+                                                    </a>
+                                                </li>
+                                                <li class="news-catalog__filters-search-dropdown-list-item">
+                                                    <a href="#" class="news-catalog__filters-search-dropdown-link">
+                                                        Ак Барс
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="news-catalog__filters-search-tags">
+                                                <a href="#" class="news-catalog__filters-search-tag">
+                                                    #Ак Барс
+                                                </a>
+                                                <a href="#" class="news-catalog__filters-search-tag">
+                                                    #Ак Буре
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="news-catalog__filters-mobile-filters">
+                            <button class="news-catalog__filters-mobile-filters-open-btn" type="button">
+                                <span class="news-catalog__filters-mobile-filters-open-btn-text">
+                                    Фильтр по новостям
+                                </span>
+                                <span class="news-catalog__filters-mobile-filters-arrow">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </span>
+
+                            </button>
+                            <div class="news-catalog__filters-mobile-filters-modal">
+
+
+                                <div class="news-catalog__filters-form-field">
+                                    <div class="select">
+                                        <button class="select__btn" type="button">
+                                            <span class="select__btn-text">
+                                                Категория новости
+                                            </span>
+                                            <div class="select__btn-arrow">
+                                                <svg width="14" height="14" aria-hidden="true">
+                                                    <use xlink:href="#arrow-down"></use>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                        <div class="select__dropdown">
+                                            <div class="select__dropdown-inner">
+                                                <ul class="select__list">
+                                                    <li class="select__list-item">
+                                                        <label class="select__label">
+                                                            <input type="radio" name="category" value="Новость портала"
+                                                                class="select__radio-input">
+                                                            <span class="select__radio-text">
+                                                                Новость портала
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__list-item">
+                                                        <label class="select__label">
+                                                            <input type="radio" name="category" value="Турнир (Матч)"
+                                                                class="select__radio-input">
+                                                            <span class="select__radio-text">
+                                                                Турнир (Матч)
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__list-item">
+                                                        <label class="select__label">
+                                                            <input type="radio" name="category" value="Событие"
+                                                                class="select__radio-input">
+                                                            <span class="select__radio-text">
+                                                                Событие
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-catalog__filters-form-field">
+                                    <div class="select">
+                                        <button class="select__btn" type="button">
+                                            <span class="select__btn-text">
+                                                Все лиги/турниры
+                                            </span>
+                                            <div class="select__btn-arrow">
+                                                <svg width="14" height="14" aria-hidden="true">
+                                                    <use xlink:href="#arrow-down"></use>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                        <div class="select__dropdown">
+                                            <div class="select__dropdown-inner">
+                                                <ul class="select__list">
+                                                    <li class="select__list-item">
+                                                        <label class="select__label">
+                                                            <input type="radio" name="type" value="Новость портала"
+                                                                class="select__radio-input">
+                                                            <span class="select__radio-text">
+                                                                Новость портала
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__list-item">
+                                                        <label class="select__label">
+                                                            <input type="radio" name="type" value="Турнир (Матч)"
+                                                                class="select__radio-input">
+                                                            <span class="select__radio-text">
+                                                                Турнир (Матч)
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__list-item">
+                                                        <label class="select__label">
+                                                            <input type="radio" name="type" value="Событие"
+                                                                class="select__radio-input">
+                                                            <span class="select__radio-text">
+                                                                Событие
+                                                            </span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-catalog__filters-form-field">
+                                    <div class="news-catalog__filters-calendar">
+                                        <label class="news-catalog__filters-calendar-label">
+                                            <input type="text" class="news-catalog__filters-calendar-input">
+                                            <span class="news-catalog__filters-calendar-icon">
+                                                <svg width="14" height="14" aria-hidden="true">
+                                                    <use xlink:href="#calendar"></use>
+                                                </svg>
+                                            </span>
+                                        </label>
+                                        <div class="news-catalog__filters-calendar-dropdown">
+                                            <div class="news-catalog__filters-calendar-dropdown-inner">
+                                                <div class="news-catalog__filters-calendar-element"></div>
+                                                <div class="news-catalog__filters-calendar-btns">
+                                                    <button class="news-catalog__filters-calendar-btn" type="button">
+                                                        За сутки
+                                                    </button>
+                                                    <button class="news-catalog__filters-calendar-btn" type="button">
+                                                        За неделю
+                                                    </button>
+                                                    <button class="news-catalog__filters-calendar-btn" type="button">
+                                                        За месяц
+                                                    </button>
+                                                    <button class="news-catalog__filters-calendar-btn" type="button">
+                                                        За всё время
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="news-catalog__bottom">
+        <div class="news-catalog__bottom-inner">
+
+
+            <ul class="news-catalog__list">
+                {{#each news}}
+                    <li class="news-catalog__list-item">
+                        {{> news-card }}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</section>

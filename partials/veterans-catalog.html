@@ -1,0 +1,244 @@
+<section class="veterans-catalog">
+    <div class="veterans-catalog__header">
+        <div class="veterans-catalog__header-inner">
+            <h1 class="veterans-catalog__heading">
+                Ветераны<br> хоккея РТ
+            </h1>
+            <div class="veterans-catalog__slider js-veterans-header-slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="veterans-catalog__slider-card">
+                                <div class="veterans-catalog__slider-card-image-container">
+                                    <img src="/veterans-header/1.webp" alt=""
+                                        class="veterans-catalog__slider-card-image">
+                                </div>
+                                <div class="veterans-catalog__slider-card-content">
+                                    <h4 class="veterans-catalog__slider-card-name">
+                                        Всеволд Елфимов
+                                    </h4>
+                                    <div class="veterans-catalog__slider-card-role">
+                                        Заслуженный тренер России и РТ
+                                    </div>
+                                    <a href="#" class="veterans-catalog__slider-card-link">
+                                        Узнать больше
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="veterans-catalog__slider-card">
+                                <div class="veterans-catalog__slider-card-image-container">
+                                    <img src="/veterans-header/2.webp" alt=""
+                                        class="veterans-catalog__slider-card-image">
+                                </div>
+                                <div class="veterans-catalog__slider-card-content">
+                                    <h4 class="veterans-catalog__slider-card-name">
+                                        Алексей Чупин
+                                    </h4>
+                                    <div class="veterans-catalog__slider-card-role">
+                                        Чемпион России 1998, 2005, 2006 г.
+                                        Серебряный призёр чемпионата России 2000, 2002 г.
+
+                                    </div>
+                                    <a href="#" class="veterans-catalog__slider-card-link">
+                                        Узнать больше
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="veterans-catalog__slider-card">
+                                <div class="veterans-catalog__slider-card-image-container">
+                                    <img src="/veterans-header/3.webp" alt=""
+                                        class="veterans-catalog__slider-card-image">
+                                </div>
+                                <div class="veterans-catalog__slider-card-content">
+                                    <h4 class="veterans-catalog__slider-card-name">
+                                        Сергей Абрамов
+                                    </h4>
+                                    <div class="veterans-catalog__slider-card-role">
+                                        Чемпион России, дважды лучший голкипер Супер лиги, участник Олимпийских игр и
+                                        Чемпионата мира,
+                                        мастер спорта, заслуженный тренер России
+                                    </div>
+                                    <a href="#" class="veterans-catalog__slider-card-link">
+                                        Узнать больше
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ol class="veterans-catalog__pagination">
+                    {{#times 3}}
+                        <li class="veterans-catalog__pagination-bullet">
+                            <div class="veterans-catalog__pagination-bullet-dot">
+
+                            </div>
+                            <div class="veterans-catalog__pagination-bullet-timer">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="48" stroke-width="1" stroke="white" fill="none"
+                                        vector-effect="non-scaling-stroke" />
+                                </svg>
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="48" stroke-width="1" stroke="#FF0000" fill="none"
+                                        vector-effect="non-scaling-stroke" />
+                                </svg>
+                                <div class="veterans-catalog__pagination-bullet-timer-number">
+
+                                </div>
+                            </div>
+                        </li>
+                    {{/times}}
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="veterans-catalog__content">
+        <div class="veterans-catalog__content-inner">
+
+
+            <div class="veterans-catalog__sorting">
+                <div class="veterans-catalog__sorting-inner">
+                    <h4 class="veterans-catalog__sorting-title">
+                        Сортировать по:
+                    </h4>
+                    <div class="veterans-catalog__sorting-radios">
+                        <label class="veterans-catalog__sorting-radio">
+                            <input type="radio" name="sort" class="veterans-catalog__sorting-radio-input"
+                                value="По фамилии" form="veterans-catalog-filters" checked="">
+                            <span class="veterans-catalog__sorting-radio-text">
+                                По фамилии
+                            </span>
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </label>
+                        <label class="veterans-catalog__sorting-radio">
+                            <input type="radio" name="sort" class="veterans-catalog__sorting-radio-input"
+                                value="По дате рождения" form="veterans-catalog-filters">
+                            <span class="veterans-catalog__sorting-radio-text">
+                                По дате рождения
+                            </span>
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="veterans-catalog__row">
+                <div class="veterans-catalog__sidebar">
+                    <form action="/" method="GET" class="veterans-catalog__form" id="veterans-catalog-filters">
+                        <div class="veterans-catalog__search">
+                            <input type="search" class="veterans-catalog__search-input" name="s"
+                                placeholder="Поиск по ветеранам">
+                            <button class="veterans-catalog__search-button" type="submit">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="veterans-catalog__filters">
+                            <button class="veterans-catalog__mobile-filters-btn" type="button">
+                                <span class="veterans-catalog__mobile-filters-btn-text">
+                                    Амплуа
+                                </span>
+                                <span class="veterans-catalog__mobile-filters-btn-arrow">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="veterans-catalog__filters-modal">
+                                <button class="veterans-catalog__filters-modal-close-btn" type="button">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </button>
+                                <h4 class="veterans-catalog__filters-title">
+                                    Амплуа
+                                </h4>
+                                <div class="veterans-catalog__filters-checkboxes">
+                                    <label class="veterans-catalog__filters-checkbox">
+                                        <input type="checkbox" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Вратарь" checked="">
+                                        <span class="veterans-catalog__filters-checkbox-mark">
+
+                                        </span>
+                                        <span class="veterans-catalog__filters-checkbox-text">
+                                            Вратарь
+                                        </span>
+                                    </label>
+                                    <label class="veterans-catalog__filters-checkbox">
+                                        <input type="checkbox" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Нападающий"
+                                            checked="">
+                                        <span class="veterans-catalog__filters-checkbox-mark">
+
+                                        </span>
+                                        <span class="veterans-catalog__filters-checkbox-text">
+                                            Нападающий
+                                        </span>
+                                    </label>
+                                    <label class="veterans-catalog__filters-checkbox">
+                                        <input type="checkbox" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Защитник"
+                                            checked="">
+                                        <span class="veterans-catalog__filters-checkbox-mark">
+
+                                        </span>
+                                        <span class="veterans-catalog__filters-checkbox-text">
+                                            Защитник
+                                        </span>
+                                    </label>
+                                    <label class="veterans-catalog__filters-checkbox">
+                                        <input type="checkbox" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Тренер" checked="">
+                                        <span class="veterans-catalog__filters-checkbox-mark">
+
+                                        </span>
+                                        <span class="veterans-catalog__filters-checkbox-text">
+                                            Тренер
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="veterans-catalog__filters-modal-btns">
+                                    <button class="veterans-catalog__filters-modal-submit-btn" type="submit">
+                                        Применить
+                                    </button>
+                                    <button class="veterans-catalog__filters-modal-reset-btn" type="reset">
+                                        Сбросить фильтр
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="veterans-catalog__main">
+                    <ul class="veterans-catalog__list">
+                        {{#each veterans}}
+                            <li class="veterans-catalog__list-item">
+                                {{> veteran-card }}
+                            </li>
+                        {{/each}}
+                    </ul>
+                    <a href="#" class="veterans-catalog__show-more">
+                        Показать ещё
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

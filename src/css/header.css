@@ -1,6 +1,8 @@
 .page-header {
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 100;
 }
 
 .page-header__menu {

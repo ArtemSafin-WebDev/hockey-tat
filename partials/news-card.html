@@ -9,6 +9,11 @@
         <h3 class="news-card__title">
             {{ title }}
         </h3>
+        {{#if desc}}
+            <div class="news-card__desc">
+                {{ desc }}
+            </div>
+        {{/if}}
         <div class="news-card__tags">
             {{#each tags}}
                 <div class="news-card__tag">
@@ -16,5 +21,13 @@
                 </div>
             {{/each}}
         </div>
+        {{#if hasButton}}
+            <div class="news-card__button">
+                Узнать больше
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </div>
+        {{/if}}
     </div>
 </a>

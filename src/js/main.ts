@@ -12,6 +12,10 @@ import quotesSlider from "./quotesSlider";
 import search from "./search";
 import ticker from "./ticker";
 import "../css/style.css";
+import select from "./select";
+import datepicker from "./datepicker";
+import veteransHeaderSlider from "./veteransHeaderSlider";
+import veteransCatalogFilter from "./veteransCatalogFilter";
 
 document.addEventListener("DOMContentLoaded", () => {
   equipmentSlider();
@@ -26,4 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
   headerSubmenu();
   menu();
   achivementsCardSlider();
+  select();
+  datepicker();
+  veteransHeaderSlider();
+  veteransCatalogFilter();
 });
