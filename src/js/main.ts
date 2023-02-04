@@ -13,7 +13,7 @@ import search from "./search";
 import ticker from "./ticker";
 import "../css/style.css";
 import select from "./select";
-import datepicker from "./datepicker";
+import newsCatalogFilters from "./newsCatalogFilters";
 import veteransHeaderSlider from "./veteransHeaderSlider";
 import veteransCatalogFilter from "./veteransCatalogFilter";
 
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   menu();
   achivementsCardSlider();
   select();
-  datepicker();
+  newsCatalogFilters();
   veteransHeaderSlider();
   veteransCatalogFilter();
 });
