@@ -65,163 +65,316 @@
 
                             </button>
                             <div class="news-catalog__filters-mobile-filters-modal">
-
-
-                                <div class="news-catalog__filters-form-field">
-                                    <div class="select">
-                                        <button class="select__btn" type="button">
-                                            <span class="select__btn-text">
-                                                Категория новости
-                                            </span>
-                                            <div class="select__btn-arrow">
-                                                <svg width="14" height="14" aria-hidden="true">
-                                                    <use xlink:href="#arrow-down"></use>
-                                                </svg>
-                                            </div>
-                                        </button>
-                                        <div class="select__dropdown">
-                                            <div class="select__dropdown-inner">
-                                                <ul class="select__list">
-                                                    <li class="select__list-item">
-                                                        <label class="select__label">
-                                                            <input type="radio" name="category" value="Новость портала"
-                                                                class="select__radio-input">
-                                                            <span class="select__radio-text">
-                                                                Новость портала
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="select__list-item">
-                                                        <label class="select__label">
-                                                            <input type="radio" name="category" value="Турнир (Матч)"
-                                                                class="select__radio-input">
-                                                            <span class="select__radio-text">
-                                                                Турнир (Матч)
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="select__list-item">
-                                                        <label class="select__label">
-                                                            <input type="radio" name="category" value="Событие"
-                                                                class="select__radio-input">
-                                                            <span class="select__radio-text">
-                                                                Событие
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-catalog__filters-form-field">
-                                    <div class="select">
-                                        <button class="select__btn" type="button">
-                                            <span class="select__btn-text">
-                                                Все лиги/турниры
-                                            </span>
-                                            <div class="select__btn-arrow">
-                                                <svg width="14" height="14" aria-hidden="true">
-                                                    <use xlink:href="#arrow-down"></use>
-                                                </svg>
-                                            </div>
-                                        </button>
-                                        <div class="select__dropdown">
-                                            <div class="select__dropdown-inner">
-                                                <ul class="select__list">
-                                                    <li class="select__list-item">
-                                                        <label class="select__label">
-                                                            <input type="radio" name="type" value="Новость портала"
-                                                                class="select__radio-input">
-                                                            <span class="select__radio-text">
-                                                                Новость портала
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="select__list-item">
-                                                        <label class="select__label">
-                                                            <input type="radio" name="type" value="Турнир (Матч)"
-                                                                class="select__radio-input">
-                                                            <span class="select__radio-text">
-                                                                Турнир (Матч)
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="select__list-item">
-                                                        <label class="select__label">
-                                                            <input type="radio" name="type" value="Событие"
-                                                                class="select__radio-input">
-                                                            <span class="select__radio-text">
-                                                                Событие
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-catalog__filters-form-field">
-                                    <div class="news-catalog__filters-calendar">
-                                        <label class="news-catalog__filters-calendar-label">
-                                            <input type="text" class="news-catalog__filters-calendar-input"
-                                                value="За все время" readonly="">
-                                            <span class="news-catalog__filters-calendar-icon">
-                                                <svg width="14" height="14" aria-hidden="true">
-                                                    <use xlink:href="#calendar"></use>
-                                                </svg>
-                                            </span>
-                                        </label>
-                                        <div class="news-catalog__filters-calendar-dropdown">
-                                            <div class="news-catalog__filters-calendar-dropdown-inner">
-
-                                                <input type="hidden" name="date"
-                                                    class="news-catalog__filters-calendar-element">
-                                                <div class="news-catalog__filters-calendar-btns">
-                                                    <label class="news-catalog__filters-calendar-checkbox">
-                                                        <input type="radio"
-                                                            class="news-catalog__filters-calendar-checkbox-input"
-                                                            name="period" value="За сутки">
-                                                        <span class="news-catalog__filters-calendar-checkbox-text">
-                                                            За сутки
-                                                        </span>
-                                                    </label>
-                                                    <label class="news-catalog__filters-calendar-checkbox">
-                                                        <input type="radio"
-                                                            class="news-catalog__filters-calendar-checkbox-input"
-                                                            name="period" value="За неделю">
-                                                        <span class="news-catalog__filters-calendar-checkbox-text">
-                                                            За неделю
-                                                        </span>
-                                                    </label>
-                                                    <label class="news-catalog__filters-calendar-checkbox">
-                                                        <input type="radio"
-                                                            class="news-catalog__filters-calendar-checkbox-input"
-                                                            name="period" value="За месяц">
-                                                        <span class="news-catalog__filters-calendar-checkbox-text">
-                                                            За месяц
-                                                        </span>
-                                                    </label>
-                                                    <label class="news-catalog__filters-calendar-checkbox">
-                                                        <input type="radio"
-                                                            class="news-catalog__filters-calendar-checkbox-input news-catalog__filters-calendar-checkbox-all"
-                                                            name="period" value="За всё время" checked="">
-                                                        <span class="news-catalog__filters-calendar-checkbox-text">
-                                                            За всё время
-                                                        </span>
-                                                    </label>
-
+                                <button class="news-catalog__filters-mobile-filters-modal-close" type="button">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#cross"></use>
+                                    </svg>
+                                </button>
+                                <h4 class="news-catalog__filters-mobile-filters-modal-title">
+                                    Фильтр<br>
+                                    по новостям
+                                </h4>
+                                <div class="news-catalog__filters-mobile-filters-modal-fields">
+                                    <div
+                                        class="news-catalog__filters-form-field news-catalog__filters-form-field--category">
+                                        <div class="select" data-select-name="category-select"
+                                            data-do-not-close-on-mobile="" data-placeholder="Категория новости">
+                                            <button class="select__btn" type="button">
+                                                <span class="select__btn-text">
+                                                    Категория новости
+                                                </span>
+                                                <div class="select__btn-arrow">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#arrow-down"></use>
+                                                    </svg>
                                                 </div>
-                                                <button class="news-catalog__filters-calendar-reset" type="button">
-                                                    Сбросить
-                                                </button>
-                                                <button class="news-catalog__filters-calendar-apply-btn" type="button">
-                                                    Применить дату
-                                                </button>
+                                            </button>
+                                            <div class="select__dropdown">
+                                                <div class="select__dropdown-inner">
+                                                    <h4 class="news-catalog__filters-mobile-inner-title">
+                                                        Категория новости
+                                                    </h4>
+                                                    <div class="news-catalog__filters-select-list-wrapper">
+                                                        <ul class="select__list js-check-scroll">
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="category"
+                                                                        value="Новость портала"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        Новость портала
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="category"
+                                                                        value="Турнир (Матч)"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        Турнир (Матч)
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="category" value="Событие"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        Событие
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="category"
+                                                                        value="Трансферы" class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        Трансферы
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="category"
+                                                                        value="Пресс-конференция"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        Пресс-конференция
+
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="category" value="Интервью"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        Интервью
+
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="category"
+                                                                        value="Поздравление"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        Поздравление
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="category"
+                                                                        value="Соболезнование"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        Соболезнование
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="category" value="Семинары"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        Семинары
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="category" value="Обучение"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        Обучение
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <button
+                                                        class="news-catalog__filters-mobile-select-apply js-select-close-btn"
+                                                        type="button">
+                                                        Применить
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div
+                                        class="news-catalog__filters-form-field news-catalog__filters-form-field--league">
+                                        <div class="select" data-select-name="league-select"
+                                            data-do-not-close-on-mobile="" data-placeholder="Все лиги/турниры">
+                                            <button class="select__btn" type="button">
+                                                <span class="select__btn-text">
+                                                    Все лиги/турниры
+                                                </span>
+                                                <div class="select__btn-arrow">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#arrow-down"></use>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                            <div class="select__dropdown">
+                                                <div class="select__dropdown-inner">
+                                                    <h4 class="news-catalog__filters-mobile-inner-title">
+                                                        Лига / Турнир
+                                                    </h4>
+                                                    <div class="news-catalog__filters-select-list-wrapper">
+                                                        <ul class="select__list js-check-scroll">
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="type" value="КХЛ"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
 
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        КХЛ
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="type" value="ВХЛ"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        ВХЛ
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="select__list-item">
+                                                                <label class="select__label">
+                                                                    <input type="radio" name="type" value="МХЛ"
+                                                                        class="select__radio-input">
+                                                                    <span class="select__radio-circle-mark only-mobile">
+
+                                                                    </span>
+                                                                    <span class="select__radio-text">
+                                                                        МХЛ
+                                                                    </span>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <button
+                                                        class="news-catalog__filters-mobile-select-apply js-select-close-btn"
+                                                        type="button">
+                                                        Применить
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="news-catalog__filters-form-field news-catalog__filters-form-field--calendar">
+                                        <div class="news-catalog__filters-calendar">
+                                            <label class="news-catalog__filters-calendar-label">
+                                                <input type="text" class="news-catalog__filters-calendar-input"
+                                                    value="За все время" readonly="">
+                                                <span class="news-catalog__filters-calendar-icon">
+                                                    <svg width="14" height="14" aria-hidden="true">
+                                                        <use xlink:href="#calendar"></use>
+                                                    </svg>
+                                                </span>
+                                            </label>
+                                            <div class="news-catalog__filters-calendar-dropdown">
+                                                <div class="news-catalog__filters-calendar-dropdown-inner">
+
+                                                    <input type="hidden" name="date"
+                                                        class="news-catalog__filters-calendar-element">
+                                                    <div class="news-catalog__filters-calendar-btns">
+                                                        <label class="news-catalog__filters-calendar-checkbox">
+                                                            <input type="radio"
+                                                                class="news-catalog__filters-calendar-checkbox-input"
+                                                                name="period" value="За сутки">
+                                                            <span class="news-catalog__filters-calendar-checkbox-text">
+                                                                За сутки
+                                                            </span>
+                                                        </label>
+                                                        <label class="news-catalog__filters-calendar-checkbox">
+                                                            <input type="radio"
+                                                                class="news-catalog__filters-calendar-checkbox-input"
+                                                                name="period" value="За неделю">
+                                                            <span class="news-catalog__filters-calendar-checkbox-text">
+                                                                За неделю
+                                                            </span>
+                                                        </label>
+                                                        <label class="news-catalog__filters-calendar-checkbox">
+                                                            <input type="radio"
+                                                                class="news-catalog__filters-calendar-checkbox-input"
+                                                                name="period" value="За месяц">
+                                                            <span class="news-catalog__filters-calendar-checkbox-text">
+                                                                За месяц
+                                                            </span>
+                                                        </label>
+                                                        <label class="news-catalog__filters-calendar-checkbox">
+                                                            <input type="radio"
+                                                                class="news-catalog__filters-calendar-checkbox-input news-catalog__filters-calendar-checkbox-all"
+                                                                name="period" value="За всё время" checked="">
+                                                            <span class="news-catalog__filters-calendar-checkbox-text">
+                                                                За всё время
+                                                            </span>
+                                                        </label>
+
+                                                    </div>
+                                                    <button class="news-catalog__filters-calendar-reset" type="button">
+                                                        Сбросить
+                                                    </button>
+                                                    <button class="news-catalog__filters-calendar-apply-btn"
+                                                        type="button">
+                                                        Применить дату
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="news-catalog__filters-mobile-filters-modal-btns">
+                                    <button class="news-catalog__filters-mobile-filters-modal-submit-btn" type="submit">
+                                        Применить
+                                    </button>
+                                    <button class="news-catalog__filters-mobile-filters-modal-reset-btn" type="reset">
+                                        Сбросить фильтр
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -241,6 +394,9 @@
                     </li>
                 {{/each}}
             </ul>
+            <a href="#" class="news-catalog__show-more">
+                Показать ещё
+            </a>
         </div>
     </div>
 </section>

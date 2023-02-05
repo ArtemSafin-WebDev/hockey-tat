@@ -16,6 +16,7 @@ import select from "./select";
 import newsCatalogFilters from "./newsCatalogFilters";
 import veteransHeaderSlider from "./veteransHeaderSlider";
 import veteransCatalogFilter from "./veteransCatalogFilter";
+import checkScroll from "./checkScroll";
 
 document.addEventListener("DOMContentLoaded", () => {
   equipmentSlider();
@@ -34,4 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
   newsCatalogFilters();
   veteransHeaderSlider();
   veteransCatalogFilter();
+  checkScroll();
 });

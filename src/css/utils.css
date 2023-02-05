@@ -1,0 +1,5 @@
+.only-mobile {
+  @media (--desktop) {
+    display: none !important;
+  }
+}
