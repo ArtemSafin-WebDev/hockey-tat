@@ -143,6 +143,11 @@
                         <div class="veterans-catalog__search">
                             <input type="search" class="veterans-catalog__search-input" name="s"
                                 placeholder="Поиск по ветеранам">
+                            <button class="veterans-catalog__search-close-btn" type="button">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                            </button>
                             <button class="veterans-catalog__search-button" type="submit">
                                 <svg width="14" height="14" aria-hidden="true">
                                     <use xlink:href="#search"></use>
@@ -152,7 +157,7 @@
                         <div class="veterans-catalog__filters">
                             <button class="veterans-catalog__mobile-filters-btn" type="button">
                                 <span class="veterans-catalog__mobile-filters-btn-text">
-                                    Амплуа
+                                    Все амплуа
                                 </span>
                                 <span class="veterans-catalog__mobile-filters-btn-arrow">
                                     <svg width="14" height="14" aria-hidden="true">
@@ -161,18 +166,25 @@
                                 </span>
                             </button>
                             <div class="veterans-catalog__filters-modal">
-                                <button class="veterans-catalog__filters-modal-close-btn" type="button">
-                                    <svg width="14" height="14" aria-hidden="true">
-                                        <use xlink:href="#cross"></use>
-                                    </svg>
-                                </button>
+
                                 <h4 class="veterans-catalog__filters-title">
                                     Амплуа
                                 </h4>
                                 <div class="veterans-catalog__filters-checkboxes">
                                     <label class="veterans-catalog__filters-checkbox">
-                                        <input type="checkbox" name="amplua"
-                                            class="veterans-catalog__filters-checkbox-input" value="Вратарь" checked="">
+                                        <input type="radio" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Все амплуа"
+                                            checked="">
+                                        <span class="veterans-catalog__filters-checkbox-mark">
+
+                                        </span>
+                                        <span class="veterans-catalog__filters-checkbox-text">
+                                            Все амплуа
+                                        </span>
+                                    </label>
+                                    <label class="veterans-catalog__filters-checkbox">
+                                        <input type="radio" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Вратарь">
                                         <span class="veterans-catalog__filters-checkbox-mark">
 
                                         </span>
@@ -181,9 +193,8 @@
                                         </span>
                                     </label>
                                     <label class="veterans-catalog__filters-checkbox">
-                                        <input type="checkbox" name="amplua"
-                                            class="veterans-catalog__filters-checkbox-input" value="Нападающий"
-                                            checked="">
+                                        <input type="radio" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Нападающий">
                                         <span class="veterans-catalog__filters-checkbox-mark">
 
                                         </span>
@@ -192,9 +203,8 @@
                                         </span>
                                     </label>
                                     <label class="veterans-catalog__filters-checkbox">
-                                        <input type="checkbox" name="amplua"
-                                            class="veterans-catalog__filters-checkbox-input" value="Защитник"
-                                            checked="">
+                                        <input type="radio" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Защитник">
                                         <span class="veterans-catalog__filters-checkbox-mark">
 
                                         </span>
@@ -203,8 +213,8 @@
                                         </span>
                                     </label>
                                     <label class="veterans-catalog__filters-checkbox">
-                                        <input type="checkbox" name="amplua"
-                                            class="veterans-catalog__filters-checkbox-input" value="Тренер" checked="">
+                                        <input type="radio" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Тренер">
                                         <span class="veterans-catalog__filters-checkbox-mark">
 
                                         </span>
@@ -214,10 +224,10 @@
                                     </label>
                                 </div>
                                 <div class="veterans-catalog__filters-modal-btns">
-                                    <button class="veterans-catalog__filters-modal-submit-btn" type="submit">
+                                    <button class="veterans-catalog__filters-modal-submit-btn" type="button">
                                         Применить
                                     </button>
-                                    <button class="veterans-catalog__filters-modal-reset-btn" type="reset">
+                                    <button class="veterans-catalog__filters-modal-reset-btn" type="button">
                                         Сбросить фильтр
                                     </button>
                                 </div>
