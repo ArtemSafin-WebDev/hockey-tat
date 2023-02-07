@@ -28,18 +28,8 @@ export default function newsCatalogFilters() {
       ".news-catalog__filters-calendar-input"
     );
 
-    const datePresets = Array.from(
-      element.querySelectorAll<HTMLInputElement>(
-        ".news-catalog__filters-calendar-checkbox-input"
-      )
-    );
-
     const calendarResetBtn = element.querySelector<HTMLButtonElement>(
       ".news-catalog__filters-calendar-reset"
-    );
-
-    const allPreset = element.querySelector<HTMLInputElement>(
-      ".news-catalog__filters-calendar-checkbox-all"
     );
 
     const calendarDropdown: HTMLElement = element.querySelector(
@@ -48,6 +38,10 @@ export default function newsCatalogFilters() {
 
     const applyBtn = element.querySelector(
       ".news-catalog__filters-calendar-apply-btn"
+    );
+
+    const mobileSubmitBtn = element.querySelector<HTMLButtonElement>(
+      ".news-catalog__filters-mobile-filters-modal-submit-btn"
     );
 
     let isModalOpen = false;
@@ -128,34 +122,8 @@ export default function newsCatalogFilters() {
         dateFormat: "dd.MM.yyyy",
         range: true,
         multipleDatesSeparator: " - ",
-        onSelect: () => {
-          datePresets.forEach((input) => (input.checked = false));
-        },
       });
     }
-
-    datePresets.forEach((input) => {
-      input.addEventListener("change", () => {
-        const checkedPreset = datePresets.find((input) => input.checked);
-        if (datepicker) {
-          // @ts-ignore
-          datepicker.clear({
-            silent: true,
-          });
-        }
-
-        if (checkedPreset) {
-          console.log(
-            "nextSibling",
-            checkedPreset.nextElementSibling?.textContent
-          );
-          const textValue = checkedPreset.nextElementSibling?.textContent;
-          setTimeout(() => {
-            showDateField.value = textValue.trim();
-          }, 20);
-        }
-      });
-    });
 
     if (datepicker && calendarLabel && calendarRoot) {
       calendarLabel.addEventListener("click", (event) => {
@@ -165,15 +133,6 @@ export default function newsCatalogFilters() {
         } else {
           closeCalendar();
         }
-      });
-
-      document.addEventListener("click", (event) => {
-        if (window.matchMedia("(max-width: 640px)").matches) return;
-        const { target } = event;
-        if (calendarRoot.contains(target as HTMLElement)) {
-          return;
-        }
-        closeCalendar();
       });
     }
 
@@ -186,13 +145,19 @@ export default function newsCatalogFilters() {
             silent: true,
           });
         }
-        if (allPreset) {
-          allPreset.checked = true;
-          const textValue = allPreset.nextElementSibling?.textContent;
-          setTimeout(() => {
-            showDateField.value = textValue.trim();
-          }, 20);
-        }
+
+        setTimeout(() => {
+          showDateField.value = "За все время";
+
+          closeCalendar();
+        }, 50);
+      });
+    }
+
+    if (mobileSubmitBtn) {
+      mobileSubmitBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        closeModal();
       });
     }
 
@@ -204,13 +169,10 @@ export default function newsCatalogFilters() {
             silent: true,
           });
         }
-        if (allPreset) {
-          allPreset.checked = true;
-          const textValue = allPreset.nextElementSibling?.textContent;
-          setTimeout(() => {
-            showDateField.value = textValue.trim();
-          }, 20);
-        }
+
+        setTimeout(() => {
+          showDateField.value = "За все время";
+        }, 50);
       });
     }
 
