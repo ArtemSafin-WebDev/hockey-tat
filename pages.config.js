@@ -4,6 +4,7 @@ import news from "./pages-data/news";
 import veteransCatalog from "./pages-data/veterans";
 import veteransDetail from "./pages-data/veteranDetail";
 import vospit from "./pages-data/vospit";
+import vospitDetail from "./pages-data/vospitDetail";
 
 const pagesConfig = {
   ...home,
@@ -12,6 +13,7 @@ const pagesConfig = {
   ...veteransCatalog,
   ...veteransDetail,
   ...vospit,
+  ...vospitDetail,
 };
 
 export default pagesConfig;

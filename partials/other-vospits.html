@@ -1,0 +1,17 @@
+<section class="read-also">
+    <div class="read-also__content">
+        <h2 class="read-also__heading" data-text="Воспитанники хоккея РТ">
+            Воспитанники хоккея РТ
+        </h2>
+        <ul class="read-also__list">
+            {{#each vospit }}
+                <li class="read-also__list-item">
+                    {{> vospit-card }}
+                </li>
+            {{/each}}
+        </ul>
+        <a href="#" class="read-also__show-more">
+            Показать ещё
+        </a>
+    </div>
+</section>
