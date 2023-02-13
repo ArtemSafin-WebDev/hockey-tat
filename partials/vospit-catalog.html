@@ -1,0 +1,146 @@
+<section class="veterans-catalog">
+    <div class="veterans-catalog__header">
+        <div class="veterans-catalog__header-inner">
+            <h1 class="veterans-catalog__heading">
+                Воспитанники<br> хоккея РТ
+            </h1>
+
+        </div>
+    </div>
+    <div class="veterans-catalog__content">
+        <div class="veterans-catalog__content-inner">
+            <div class="veterans-catalog__sorting">
+                <div class="veterans-catalog__sorting-inner">
+                    <h4 class="veterans-catalog__sorting-title">
+                        Сортировать по:
+                    </h4>
+                    <div class="veterans-catalog__sorting-radios">
+                        <label class="veterans-catalog__sorting-radio">
+                            <input type="radio" name="sort" class="veterans-catalog__sorting-radio-input"
+                                value="По фамилии" form="veterans-catalog-filters" checked="">
+                            <span class="veterans-catalog__sorting-radio-text">
+                                По фамилии
+                            </span>
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </label>
+                        <label class="veterans-catalog__sorting-radio">
+                            <input type="radio" name="sort" class="veterans-catalog__sorting-radio-input"
+                                value="По дате рождения" form="veterans-catalog-filters">
+                            <span class="veterans-catalog__sorting-radio-text">
+                                По дате рождения
+                            </span>
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="veterans-catalog__row">
+                <div class="veterans-catalog__sidebar">
+                    <form action="/" method="GET" class="veterans-catalog__form" id="veterans-catalog-filters">
+                        <div class="veterans-catalog__search">
+                            <input type="search" class="veterans-catalog__search-input" name="s"
+                                placeholder="Поиск по воспитанникам">
+                            <button class="veterans-catalog__search-close-btn" type="button">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                            </button>
+                            <button class="veterans-catalog__search-button" type="submit">
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#search"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="veterans-catalog__filters">
+                            <button class="veterans-catalog__mobile-filters-btn" type="button">
+                                <span class="veterans-catalog__mobile-filters-btn-text">
+                                    Все амплуа
+                                </span>
+                                <span class="veterans-catalog__mobile-filters-btn-arrow">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </span>
+                            </button>
+                            <div class="veterans-catalog__filters-modal">
+
+                                <h4 class="veterans-catalog__filters-title">
+                                    Амплуа
+                                </h4>
+                                <div class="veterans-catalog__filters-checkboxes">
+                                    <label class="veterans-catalog__filters-checkbox">
+                                        <input type="radio" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Все амплуа"
+                                            checked="">
+                                        <span class="veterans-catalog__filters-checkbox-mark">
+
+                                        </span>
+                                        <span class="veterans-catalog__filters-checkbox-text">
+                                            Все амплуа
+                                        </span>
+                                    </label>
+                                    <label class="veterans-catalog__filters-checkbox">
+                                        <input type="radio" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Вратарь">
+                                        <span class="veterans-catalog__filters-checkbox-mark">
+
+                                        </span>
+                                        <span class="veterans-catalog__filters-checkbox-text">
+                                            Вратарь
+                                        </span>
+                                    </label>
+                                    <label class="veterans-catalog__filters-checkbox">
+                                        <input type="radio" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Нападающий">
+                                        <span class="veterans-catalog__filters-checkbox-mark">
+
+                                        </span>
+                                        <span class="veterans-catalog__filters-checkbox-text">
+                                            Нападающий
+                                        </span>
+                                    </label>
+                                    <label class="veterans-catalog__filters-checkbox">
+                                        <input type="radio" name="amplua"
+                                            class="veterans-catalog__filters-checkbox-input" value="Защитник">
+                                        <span class="veterans-catalog__filters-checkbox-mark">
+
+                                        </span>
+                                        <span class="veterans-catalog__filters-checkbox-text">
+                                            Защитник
+                                        </span>
+                                    </label>
+
+                                </div>
+                                <div class="veterans-catalog__filters-modal-btns">
+                                    <button class="veterans-catalog__filters-modal-submit-btn" type="button">
+                                        Применить
+                                    </button>
+                                    <button class="veterans-catalog__filters-modal-reset-btn" type="button">
+                                        Сбросить фильтр
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="veterans-catalog__main">
+                    <ul class="veterans-catalog__list">
+                        {{#each vospit}}
+                            <li class="veterans-catalog__list-item">
+                                {{> vospit-card }}
+                            </li>
+                        {{/each}}
+                    </ul>
+                    <a href="#" class="veterans-catalog__show-more">
+                        Показать ещё
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

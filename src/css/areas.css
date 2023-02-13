@@ -82,12 +82,14 @@
 }
 
 .areas__bg {
-  position: absolute;
-  bottom: 13rem;
-  width: 39rem;
-  right: 9rem;
-  z-index: -1;
-  pointer-events: none;
+  @media (--mobile) {
+    position: absolute;
+    bottom: 13rem;
+    width: 39rem;
+    right: 9rem;
+    z-index: -1;
+    pointer-events: none;
+  }
 }
 
 .areas__bg-image {
