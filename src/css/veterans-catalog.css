@@ -19,6 +19,25 @@
   grid-gap: var(--content-padding, 0);
 }
 
+.veterans-catalog__header--judges {
+  background: linear-gradient(
+      98.31deg,
+      rgba(0, 128, 0, 0.94) 10.52%,
+      rgba(35, 61, 61, 0.94) 79.6%
+    ),
+    linear-gradient(0deg, #008000, #008000), url("/judges-bg.webp");
+
+  min-height: 27rem;
+
+  @media (--mobile) {
+    min-height: 14rem;
+  }
+
+  & .veterans-catalog__heading {
+    align-self: flex-start;
+  }
+}
+
 .veterans-catalog__header-inner {
   grid-column-start: content-start;
   grid-column-end: content-end;
@@ -41,7 +60,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 9rem;
-  line-height: 8rem;
+  line-height: 1;
   align-self: flex-end;
   margin: 4.5rem 0;
   grid-column: 1 / 6;
