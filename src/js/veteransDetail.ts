@@ -17,6 +17,8 @@ export default function veteransDetail() {
       element.querySelectorAll(".veterans-detail__tabs-item")
     );
 
+    if (!links.length || !tabs.length) return;
+
     const tabsContainer = element.querySelector(".veterans-detail__tabs");
 
     const setActive = (index: number) => {
