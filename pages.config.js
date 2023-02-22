@@ -7,6 +7,7 @@ import vospit from "./pages-data/vospit";
 import vospitDetail from "./pages-data/vospitDetail";
 import judges from "./pages-data/judges";
 import judgeDetail from "./pages-data/judgeDetail";
+import trainers from "./pages-data/trainers";
 
 const pagesConfig = {
   ...home,
@@ -18,6 +19,7 @@ const pagesConfig = {
   ...vospitDetail,
   ...judges,
   ...judgeDetail,
+  ...trainers,
 };
 
 export default pagesConfig;

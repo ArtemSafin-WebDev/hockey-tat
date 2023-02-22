@@ -42,7 +42,7 @@
   font-weight: 500;
   font-size: 2rem;
   line-height: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .judge-card__first-name {
@@ -66,4 +66,9 @@
   line-height: 1.6rem;
   color: #4e524e;
   margin-bottom: 2rem;
+  margin-top: auto;
+  color: #4e524e;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

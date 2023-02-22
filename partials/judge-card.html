@@ -14,8 +14,10 @@
         <div class="judge-card__date">
             {{ date }}
         </div>
-        <div class="judge-card__category">
-            {{ category }}
-        </div>
+        {{#if category}}
+            <div class="judge-card__category">
+                {{ category }}
+            </div>
+        {{/if}}
     </div>
 </a>

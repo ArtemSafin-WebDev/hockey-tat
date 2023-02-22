@@ -38,6 +38,25 @@
   }
 }
 
+.veterans-catalog__header--trainers {
+  background: linear-gradient(
+      98.31deg,
+      rgba(0, 128, 0, 0.94) 10.52%,
+      rgba(35, 61, 61, 0.94) 79.6%
+    ),
+    linear-gradient(0deg, #008000, #008000), url("/trainers-header.webp");
+
+  min-height: 27rem;
+
+  @media (--mobile) {
+    min-height: 14rem;
+  }
+
+  & .veterans-catalog__heading {
+    align-self: flex-start;
+  }
+}
+
 .veterans-catalog__header-inner {
   grid-column-start: content-start;
   grid-column-end: content-end;
