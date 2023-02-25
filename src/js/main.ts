@@ -19,6 +19,7 @@ import veteransCatalogFilter from "./veteransCatalogFilter";
 import checkScroll from "./checkScroll";
 import veteransDetail from "./veteransDetail";
 import fancybox from "./fancybox";
+import counters from "./counters";
 
 document.addEventListener("DOMContentLoaded", () => {
   equipmentSlider();
@@ -40,4 +41,5 @@ document.addEventListener("DOMContentLoaded", () => {
   checkScroll();
   veteransDetail();
   fancybox();
+  counters();
 });
