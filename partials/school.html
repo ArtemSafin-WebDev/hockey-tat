@@ -1,0 +1,124 @@
+<section class="school">
+    <div class="school__top">
+        <div class="school__top-inner">
+            <h1 class="school__heading" data-text="База знаний">
+                База знаний
+            </h1>
+        </div>
+
+    </div>
+    <div class="school__bottom">
+        <div class="school__bottom-inner">
+            <form action="/" method="GET" class="school__search-form">
+                <input type="search" class="school__search-form-input" placeholder="Поиск по названию">
+                <button class="school__search-form-submit" type="submit">
+                    <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#search"></use>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="school__sidebar">
+                <h4 class="school__sidebar-title">Тип программы</h4>
+                <div class="school__sidebar-select">
+                    <button class="school__sidebar-select-btn" type="button">
+                        <span class="school__sidebar-select-btn-text">
+                            Тип программы
+                        </span>
+                        <span class="school__sidebar-select-btn-icon">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="school__sidebar-select-dropdown">
+                        <div class="school__sidebar-select-dropdown-inner">
+                            <ul class="school__sidebar-select-list">
+                                <li class="school__sidebar-select-list-item">
+                                    <a href="#" class="school__sidebar-select-link active">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                        Национальная программа подготовки хоккеистов
+                                    </a>
+                                </li>
+                                <li class="school__sidebar-select-list-item">
+                                    <a href="#" class="school__sidebar-select-link">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                        Тренировки
+                                    </a>
+                                </li>
+                                <li class="school__sidebar-select-list-item">
+                                    <a href="#" class="school__sidebar-select-link">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                        Медицина
+                                    </a>
+                                </li>
+                                <li class="school__sidebar-select-list-item">
+                                    <a href="#" class="school__sidebar-select-link">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                        Судейство
+                                    </a>
+                                </li>
+                                <li class="school__sidebar-select-list-item">
+                                    <a href="#" class="school__sidebar-select-link">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                        Документы
+                                    </a>
+                                </li>
+                                <li class="school__sidebar-select-list-item">
+                                    <a href="#" class="school__sidebar-select-link">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                        Психология
+                                    </a>
+                                </li>
+                                <li class="school__sidebar-select-list-item">
+                                    <a href="#" class="school__sidebar-select-link">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-right"></use>
+                                        </svg>
+                                        Литература
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="school__main">
+                <ul class="school__list">
+                    {{#each info}}
+                        <li class="school__list-item">
+                            <a href="#" class="school__card">
+                                <img src="{{icon}}" alt="" class="school__card-icon">
+                                <div class="school__card-content">
+                                    <h3 class="school__card-title">
+                                        {{title}}
+                                    </h3>
+                                    <div class="school__card-link">
+                                        {{linkText}}
+                                        {{#if linkIcon}}
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#link"></use>
+                                            </svg>
+                                        {{/if}}
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -9,6 +9,7 @@ import judges from "./pages-data/judges";
 import judgeDetail from "./pages-data/judgeDetail";
 import trainers from "./pages-data/trainers";
 import trainerDetail from "./pages-data/trainerDetail";
+import school from "./pages-data/school";
 
 const pagesConfig = {
   ...home,
@@ -22,6 +23,7 @@ const pagesConfig = {
   ...judgeDetail,
   ...trainers,
   ...trainerDetail,
+  ...school,
 };
 
 export default pagesConfig;

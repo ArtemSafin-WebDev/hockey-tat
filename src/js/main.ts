@@ -20,6 +20,7 @@ import checkScroll from "./checkScroll";
 import veteransDetail from "./veteransDetail";
 import fancybox from "./fancybox";
 import counters from "./counters";
+import schoolSelect from "./schoolSelect";
 
 document.addEventListener("DOMContentLoaded", () => {
   equipmentSlider();
@@ -42,4 +43,5 @@ document.addEventListener("DOMContentLoaded", () => {
   veteransDetail();
   fancybox();
   counters();
+  schoolSelect();
 });
