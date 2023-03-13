@@ -1,0 +1,17 @@
+<section class="league-news">
+    <div class="league-news__inner">
+        <h2 class="league-news__heading" data-text="Новости лиги">
+            Новости лиги
+        </h2>
+        <ul class="league-news__list">
+            {{#each news}}
+                <li class="league-news__list-item">
+                    {{> news-card }}
+                </li>
+            {{/each}}
+        </ul>
+        <a href="#" class="league-news__show-more">
+            Показать ещё
+        </a>
+    </div>
+</section>

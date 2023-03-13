@@ -21,6 +21,8 @@ import veteransDetail from "./veteransDetail";
 import fancybox from "./fancybox";
 import counters from "./counters";
 import schoolSelect from "./schoolSelect";
+import leagueHeader from "./leagueHeader";
+import leagueTournaments from "./leagueTournaments";
 
 document.addEventListener("DOMContentLoaded", () => {
   equipmentSlider();
@@ -44,4 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
   fancybox();
   counters();
   schoolSelect();
+  leagueHeader();
+  leagueTournaments();
 });

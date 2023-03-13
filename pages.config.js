@@ -10,6 +10,7 @@ import judgeDetail from "./pages-data/judgeDetail";
 import trainers from "./pages-data/trainers";
 import trainerDetail from "./pages-data/trainerDetail";
 import school from "./pages-data/school";
+import league from "./pages-data/league";
 
 const pagesConfig = {
   ...home,
@@ -24,6 +25,7 @@ const pagesConfig = {
   ...trainers,
   ...trainerDetail,
   ...school,
+  ...league,
 };
 
 export default pagesConfig;
