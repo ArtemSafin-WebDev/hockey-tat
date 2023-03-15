@@ -23,6 +23,7 @@ import counters from "./counters";
 import schoolSelect from "./schoolSelect";
 import leagueHeader from "./leagueHeader";
 import leagueTournaments from "./leagueTournaments";
+import leagueMatches from "./leagueMatches";
 
 document.addEventListener("DOMContentLoaded", () => {
   equipmentSlider();
@@ -48,4 +49,5 @@ document.addEventListener("DOMContentLoaded", () => {
   schoolSelect();
   leagueHeader();
   leagueTournaments();
+  leagueMatches();
 });

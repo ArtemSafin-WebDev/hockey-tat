@@ -11,6 +11,7 @@ import trainers from "./pages-data/trainers";
 import trainerDetail from "./pages-data/trainerDetail";
 import school from "./pages-data/school";
 import league from "./pages-data/league";
+import leagueMatches from "./pages-data/leagueMatches";
 
 const pagesConfig = {
   ...home,
@@ -26,6 +27,7 @@ const pagesConfig = {
   ...trainerDetail,
   ...school,
   ...league,
+  ...leagueMatches,
 };
 
 export default pagesConfig;

@@ -55,7 +55,7 @@
   overflow: hidden;
   backface-visibility: hidden;
   border: 0.6rem solid #d1d6cf;
-
+  background-color: #fff;
   &::before {
     content: "";
     display: block;
