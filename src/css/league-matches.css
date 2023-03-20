@@ -127,11 +127,12 @@
 
 .league-matches__logo {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
 
 .league-matches__heading {
@@ -1036,8 +1037,8 @@
   top: 0;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
+
+  object-fit: contain;
 
   @media (--mobile) {
     display: none;
@@ -1100,4 +1101,357 @@
 
 .league-matches__table-controls {
   display: none;
+}
+
+.league-matches__playoff-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  @media (--mobile) {
+    gap: 4rem;
+  }
+}
+
+.league-matches__playoff-block-heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 2.4rem;
+  text-align: center;
+
+  @media (--mobile) {
+    margin-bottom: 2rem;
+  }
+}
+
+.league-matches__playoff-card {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.league-matches__playoff-card:not(:first-child)
+  .league-matches__playoff-card-header {
+  display: none;
+}
+
+.league-matches__playoff-cards {
+  background: #ffffff;
+  box-shadow: 0px 2rem 6rem rgba(0, 40, 9, 0.1);
+}
+
+.league-matches__playoff-card-header {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) minmax(0, 2.5fr) repeat(7, minmax(0, 1fr))
+    minmax(0, 1.3fr);
+  grid-template-areas: "place team one two three four five six seven score";
+  grid-gap: 1rem;
+
+  @media (--mobile) {
+    grid-template-areas: "place team score";
+    grid-template-columns: minmax(0, 1fr) minmax(0, 4fr) minmax(0, 2.5fr);
+  }
+}
+
+.league-matches__playoff-card-header-item {
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  padding-bottom: 2rem;
+  color: #4e524e;
+}
+
+.league-matches__playoff-card-header-item--place {
+  grid-area: place;
+}
+.league-matches__playoff-card-header-item--team {
+  grid-area: team;
+  text-align: left;
+}
+.league-matches__playoff-card-header-item--1 {
+  grid-area: one;
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-header-item--2 {
+  grid-area: two;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-header-item--3 {
+  grid-area: three;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-header-item--4 {
+  grid-area: four;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-header-item--5 {
+  grid-area: five;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-header-item--6 {
+  grid-area: six;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-header-item--7 {
+  grid-area: seven;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-header-item--total {
+  grid-area: score;
+}
+
+.league-matches__playoff-card-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.league-matches__playoff-card-row {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr) minmax(0, 2.5fr) repeat(7, minmax(0, 1fr))
+    minmax(0, 1.3fr);
+  grid-template-areas: "place team one two three four five six seven score";
+  grid-gap: 1rem;
+  align-items: center;
+
+  @media (--mobile) {
+    grid-template-areas: "place team score";
+    grid-template-columns: minmax(0, 1fr) minmax(0, 4fr) minmax(0, 2.5fr);
+  }
+}
+
+.league-matches__playoff-card-place {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #949891;
+  grid-area: place;
+}
+
+.league-matches__playoff-card-team {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  grid-area: team;
+}
+
+.league-matches__playoff-card-team-logo-container {
+  width: 4rem;
+  height: 4rem;
+  flex-shrink: 0;
+  position: relative;
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.league-matches__playoff-card-team-logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.league-matches__playoff-card-team-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.league-matches__playoff-card-team-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #19251e;
+}
+
+.league-matches__playoff-card-team-name--grey {
+  color: #949891;
+}
+
+.league-matches__playoff-card-team-city {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #949891;
+}
+
+.league-matches__playoff-card-match {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 3rem;
+  position: relative;
+  text-align: center;
+  & .grey {
+    color: #949891;
+  }
+}
+
+.league-matches__playoff-card-match--1 {
+  grid-area: one;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-match--2 {
+  grid-area: two;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-match--3 {
+  grid-area: three;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-match--4 {
+  grid-area: four;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-match--5 {
+  grid-area: five;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-match--6 {
+  grid-area: six;
+  @media (--mobile) {
+    display: none;
+  }
+}
+.league-matches__playoff-card-match--7 {
+  grid-area: seven;
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.league-matches__playoff-card-match-mark {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-align: center;
+  background: #cfffbd;
+  min-width: 4rem;
+  white-space: nowrap;
+  padding: 0.2rem 0.5rem;
+}
+.league-matches__playoff-card-team-score {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  grid-area: score;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  position: relative;
+}
+
+.league-matches__playoff-card-row:nth-child(1)
+  .league-matches__playoff-card-team-score {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: -0.6rem;
+    width: 0.2rem;
+    background-color: #f3f3f3;
+  }
+
+  &::after {
+    content: ":";
+    position: absolute;
+    top: 100%;
+    color: #19251e;
+    left: 50%;
+    margin-top: 0.6rem;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+.league-matches__playoff-card-row:nth-child(2)
+  .league-matches__playoff-card-team-score {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -0.6rem;
+    bottom: 0;
+    width: 0.2rem;
+    background-color: #f3f3f3;
+  }
+}
+
+.league-matches__playoff-card-team-score--grey {
+  color: #949891;
+}
+
+.league-matches__playoff {
+  padding: 0 10rem;
+  padding-bottom: 6rem;
+
+  @media (--mobile) {
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.league-matches__playoff-inner-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.league-matches__playoff-inner-block-heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }

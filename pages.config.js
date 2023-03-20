@@ -12,6 +12,7 @@ import trainerDetail from "./pages-data/trainerDetail";
 import school from "./pages-data/school";
 import league from "./pages-data/league";
 import leagueMatches from "./pages-data/leagueMatches";
+import leagueMatchesPlayoff from "./pages-data/leagueMatchesPlayoff";
 
 const pagesConfig = {
   ...home,
@@ -28,6 +29,7 @@ const pagesConfig = {
   ...school,
   ...league,
   ...leagueMatches,
+  ...leagueMatchesPlayoff,
 };
 
 export default pagesConfig;
