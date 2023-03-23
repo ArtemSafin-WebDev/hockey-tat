@@ -1,5 +1,5 @@
-const leagueMatchesPlayoff = {
-  "/league-matches-playoff.html": {
+const leagueMatchesImage = {
+  "/league-matches-image.html": {
     title: "Лига КХЛ Плейофф",
     partners: [
       {
@@ -18,4 +18,4 @@ const leagueMatchesPlayoff = {
   },
 };
 
-export default leagueMatchesPlayoff;
+export default leagueMatchesImage;

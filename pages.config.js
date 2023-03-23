@@ -13,6 +13,7 @@ import school from "./pages-data/school";
 import league from "./pages-data/league";
 import leagueMatches from "./pages-data/leagueMatches";
 import leagueMatchesPlayoff from "./pages-data/leagueMatchesPlayoff";
+import leagueMatchesImage from "./pages-data/leagueMatchesImage";
 
 const pagesConfig = {
   ...home,
@@ -30,6 +31,7 @@ const pagesConfig = {
   ...league,
   ...leagueMatches,
   ...leagueMatchesPlayoff,
+  ...leagueMatchesImage,
 };
 
 export default pagesConfig;

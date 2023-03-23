@@ -309,6 +309,7 @@
 
 .league-matches__select-checkbox {
   cursor: pointer;
+  display: block;
 }
 
 .league-matches__select-checkbox-input {
@@ -321,6 +322,7 @@
   font-size: 1.6rem;
   line-height: 1.4;
   transition: color 0.2s;
+  display: block;
 }
 
 .league-matches__select-checkbox-input:checked
@@ -1454,4 +1456,326 @@
   line-height: 2.7rem;
   margin-bottom: 2rem;
   text-align: center;
+}
+
+.league-matches__image-wrapper {
+  padding: 0 10rem;
+  padding-bottom: 6rem;
+  padding-top: 2rem;
+  @media (--mobile) {
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.league-matches__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.league-matches__results {
+  padding: 0 10rem;
+  padding-bottom: 6rem;
+
+  @media (--mobile) {
+    padding: 0 2rem;
+    padding-bottom: 0;
+  }
+}
+
+.league-matches__results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.league-matches__results-card {
+  background: #ffffff;
+
+  box-shadow: 0px 2rem 6rem rgba(0, 40, 9, 0.1);
+  border: 1px solid white;
+  transition: border-color 0.2s;
+  display: grid;
+  grid-template-columns: 0.9fr 0.7fr 2.7fr;
+  grid-template-areas: "info stage teams";
+  @media (hover: hover) {
+    &:hover {
+      border-color: var(--primary-color);
+    }
+  }
+
+  @media (--mobile) {
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "info stage" "teams teams";
+  }
+}
+
+.league-matches__results-card-info {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #f3f3f3;
+  justify-content: center;
+  padding: 2rem;
+  gap: 0.3rem;
+  grid-area: info;
+
+  @media (--mobile) {
+    padding: 0;
+    border: none;
+    border-bottom: 2px solid #f3f3f3;
+    gap: 0.5rem;
+    padding-bottom: 2rem;
+    padding-right: 1rem;
+  }
+}
+
+.league-matches__results-card-date {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: #19251e;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  & .divider {
+    color: #ebebeb;
+  }
+}
+
+.league-matches__results-card-city {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #949891;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+.league-matches__results-card-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  grid-area: stage;
+  justify-content: center;
+  padding: 2rem;
+
+  @media (--mobile) {
+    gap: 0.5rem;
+    padding: 0;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #f3f3f3;
+    padding-left: 1rem;
+  }
+}
+
+.league-matches__results-card-stage-number {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+}
+
+.league-matches__results-card-stage-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #949891;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+.league-matches__results-card-teams {
+  grid-area: teams;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-gap: 2rem;
+  align-self: center;
+
+  @media (--mobile) {
+    grid-gap: 1.5rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 1.5rem;
+    padding-top: 2rem;
+  }
+}
+
+.league-matches__results-card-team {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (--desktop) {
+  .league-matches__results-card-team:first-child {
+    justify-self: flex-end;
+    & .league-matches__results-card-team-content {
+      order: -1;
+      text-align: right;
+    }
+  }
+}
+
+.league-matches__results-card-team-logo-container {
+  width: 6rem;
+  height: 6rem;
+  flex-shrink: 0;
+  position: relative;
+
+  @media (--mobile) {
+    display: none;
+  }
+}
+
+.league-matches__results-card-team-logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.league-matches__results-card-team-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  @media (--mobile) {
+    gap: 0.3rem;
+  }
+}
+
+.league-matches__results-card-team-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+.league-matches__results-card-team-city {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.2rem;
+  color: #949891;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.2rem;
+  }
+}
+
+.league-matches__results-card-score {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr 1fr;
+  grid-gap: 0.5rem;
+  align-items: center;
+
+  @media (--mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+  }
+}
+
+.league-matches__results-card-score-item {
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+.league-matches__results-card-score-divider {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-align: center;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+.league-matches__results-card-score-label {
+  text-align: center;
+  padding: 0.3rem 0.8rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  background: #cfffbd;
+  text-align: center;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+.league-matches__results-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+  gap: 3rem;
+
+  @media (--mobile) {
+    flex-direction: column;
+    margin-bottom: 4rem;
+    align-items: stretch;
+    gap: 2rem;
+  }
 }
