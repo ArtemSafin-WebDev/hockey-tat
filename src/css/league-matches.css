@@ -164,7 +164,8 @@
   flex-wrap: wrap;
   gap: 3rem;
   justify-content: center;
-
+  position: relative;
+  z-index: 50;
   @media (--mobile) {
     flex-direction: column;
     align-items: stretch;
@@ -235,6 +236,7 @@
   align-self: center;
   width: 20%;
   flex-grow: 1;
+  white-space: nowrap;
 }
 
 .league-matches__select-btn-icon {
@@ -285,10 +287,12 @@
   display: flex;
   flex-direction: column;
   padding: 1rem 2rem;
-  max-height: 40rem;
+  max-height: 30rem;
   gap: 1rem;
   scrollbar-color: #d1d6cf white;
   scrollbar-width: thin;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   &::-webkit-scrollbar {
     background-color: white;
     width: 1.1rem;
@@ -694,10 +698,11 @@
     display: flex;
     flex-direction: column;
     padding: 1rem 2rem;
-    max-height: 40rem;
+    max-height: 30rem;
     gap: 1rem;
     scrollbar-color: #d1d6cf white;
     scrollbar-width: thin;
+    overflow-x: hidden;
     &::-webkit-scrollbar {
       background-color: white;
       width: 1.1rem;
@@ -1537,7 +1542,7 @@
   font-size: 1.6rem;
   line-height: 2.6rem;
   color: #19251e;
-
+  white-space: nowrap;
   @media (--mobile) {
     font-style: normal;
     font-weight: 500;
