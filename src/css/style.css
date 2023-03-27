@@ -6,6 +6,7 @@
 @import "layout.css";
 @import "header.css";
 @import "footer.css";
+@import "datepicker.css";
 @import "partners.css";
 @import "taneko.css";
 @import "equipment.css";
@@ -32,3 +33,4 @@
 @import "league-tournaments.css";
 @import "league-news.css";
 @import "league-matches.css";
+@import "calendar.css";

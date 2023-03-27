@@ -24,6 +24,7 @@ import schoolSelect from "./schoolSelect";
 import leagueHeader from "./leagueHeader";
 import leagueTournaments from "./leagueTournaments";
 import leagueMatches from "./leagueMatches";
+import calendar from "./calendar";
 
 document.addEventListener("DOMContentLoaded", () => {
   equipmentSlider();
@@ -50,4 +51,5 @@ document.addEventListener("DOMContentLoaded", () => {
   leagueHeader();
   leagueTournaments();
   leagueMatches();
+  calendar();
 });
