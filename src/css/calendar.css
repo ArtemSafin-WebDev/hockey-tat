@@ -341,6 +341,14 @@
   .calendar__results-card-icon-image-container {
   border-color: #fffa89;
 }
+.calendar__results-card--orange-label
+  .calendar__results-card-icon-image-container {
+  border-color: #ffe1bd;
+}
+.calendar__results-card--purple-label
+  .calendar__results-card-icon-image-container {
+  border-color: #d1c6ff;
+}
 
 .calendar__results-card-icon-image {
   position: absolute;
@@ -395,6 +403,36 @@
 
   &::after {
     border-color: #fffa89;
+  }
+}
+.calendar__results-card--orange-label {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    background: #ffe1bd;
+    width: 0.5rem;
+  }
+
+  &::after {
+    border-color: #ffe1bd;
+  }
+}
+.calendar__results-card--purple-label {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    background: #d1c6ff;
+    width: 0.5rem;
+  }
+
+  &::after {
+    border-color: #d1c6ff;
   }
 }
 
@@ -1025,6 +1063,61 @@
   line-height: 1.4;
   transition: color 0.2s;
   display: block;
+  position: relative;
+}
+
+.calendar__select-mark {
+  position: absolute;
+  left: -2rem;
+  width: 0.5rem;
+
+  top: 0;
+  bottom: 0;
+}
+.calendar__select-mark.calendar__select-mark--rainbow {
+  display: flex;
+  flex-direction: column;
+
+  & > span {
+    display: block;
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    &:nth-child(1) {
+      background-color: #bdffef;
+    }
+    &:nth-child(2) {
+      background-color: #ffe1bd;
+    }
+    &:nth-child(3) {
+      background-color: #ceffbd;
+    }
+    &:nth-child(4) {
+      background-color: #fffcbd;
+    }
+    &:nth-child(5) {
+      background-color: #d1c6ff;
+    }
+  }
+}
+
+.calendar__select-mark--blue {
+  background: #bdffef;
+}
+.calendar__select-mark--orange {
+  background: #ffe1bd;
+}
+.calendar__select-mark--green {
+  background: #ceffbd;
+}
+.calendar__select-mark--yellow {
+  background: #fffcbd;
+}
+.calendar__select-mark--purple {
+  background: #d1c6ff;
 }
 
 .calendar__select-checkbox-input:checked ~ .calendar__select-checkbox-text {

@@ -1,4 +1,9 @@
 import AirDatepicker from "air-datepicker";
+import { parse } from "date-fns";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function calendar() {
   const elements: HTMLElement[] = Array.from(
@@ -6,6 +11,23 @@ export default function calendar() {
   );
 
   elements.forEach((element) => {
+    const tabsNavLinks: HTMLElement[] = Array.from(
+      element.querySelectorAll(".calendar__tabs-nav-link")
+    );
+    const activeLink = tabsNavLinks.find((link) =>
+      link.classList.contains("active")
+    );
+    if (activeLink) {
+      gsap.to(activeLink.parentElement.parentElement, {
+        duration: 0,
+        ease: "none",
+        scrollTo: {
+          x: activeLink,
+          autoKill: false,
+        },
+      });
+    }
+
     const calendar = element.querySelector(
       ".calendar__filter-form-field--calendar"
     );
@@ -67,14 +89,37 @@ export default function calendar() {
 
       let datepicker: AirDatepicker | null = null;
 
+      let activeDate = new Date();
+
+      if (showDateField.value.trim()) {
+        try {
+          const parsedDate = parse(
+            showDateField.value.trim(),
+            "dd.MM.yyyy",
+            new Date()
+          );
+
+          console.log("Parsed date");
+
+          activeDate = parsedDate;
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
       if (calendarElement) {
         datepicker = new AirDatepicker(calendarElement, {
           inline: true,
           altField: showDateField,
           altFieldDateFormat: "dd.MM.yyyy",
           dateFormat: "dd.MM.yyyy",
-          range: true,
+          range: false,
           multipleDatesSeparator: " - ",
+          startDate: activeDate,
+          selectedDates: [activeDate],
+          onSelect: () => {
+            closeCalendar();
+          },
         });
       }
 
@@ -113,32 +158,6 @@ export default function calendar() {
           closeCalendar();
         });
       }
-    }
-
-    const tabsNav = Array.from(
-      element.querySelectorAll<HTMLLinkElement>(".calendar__tabs-nav-link")
-    );
-    const tabItems = Array.from(
-      element.querySelectorAll<HTMLElement>(".calendar__tabs-item")
-    );
-
-    const setActiveTab = (index: number) => {
-      tabsNav.forEach((item) => item.classList.remove("active"));
-      tabItems.forEach((item) => item.classList.remove("active"));
-
-      tabsNav[index]?.classList.add("active");
-      tabItems[index]?.classList.add("active");
-    };
-
-    tabsNav.forEach((btn, btnIndex) => {
-      btn.addEventListener("click", (event: MouseEvent) => {
-        event.preventDefault();
-        setActiveTab(btnIndex);
-      });
-    });
-
-    if (tabsNav.length) {
-      tabsNav[0]?.click();
     }
 
     const selects = Array.from(element.querySelectorAll(".calendar__select"));

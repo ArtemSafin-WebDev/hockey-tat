@@ -1,0 +1,354 @@
+<section class="calendar">
+    <div class="calendar__header">
+        <div class="calendar__header-inner">
+            <h1 class="calendar__heading">
+                Календарь событий
+            </h1>
+        </div>
+    </div>
+    <div class="calendar__content">
+        <div class="calendar__content-inner">
+            <div class="calendar__intro-block">
+                <div class="calendar__tabs-nav">
+                    <ul class="calendar__tabs-nav-list">
+                        <li class="calendar__tabs-nav-list-item">
+                            <a href="/calendar.html" class="calendar__tabs-nav-link">
+                                Все ТИПЫ событий
+                            </a>
+                        </li>
+                        <li class="calendar__tabs-nav-list-item">
+                            <a href="/calendar-2.html" class="calendar__tabs-nav-link">
+                                ТОЛЬКО Матчи
+                            </a>
+                        </li>
+                        <li class="calendar__tabs-nav-list-item">
+                            <a href="/calendar-3.html" class="calendar__tabs-nav-link active">
+                                ТОЛЬКО события
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <form action="" method="GET" class="calendar__filter-form">
+                    <div class="calendar__filter-form-fields">
+                        <div class="calendar__filter-form-field calendar__filter-form-field--calendar">
+                            <div class="calendar__filters-calendar">
+                                <label class="calendar__filters-calendar-label">
+                                    <input type="text" class="calendar__filters-calendar-input" readonly=""
+                                        value="27.03.2023">
+                                    <span class="calendar__filters-calendar-icon">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#calendar"></use>
+                                        </svg>
+                                    </span>
+                                </label>
+                                <div class="calendar__filters-calendar-dropdown">
+                                    <div class="calendar__filters-calendar-dropdown-inner">
+
+                                        <input type="hidden" name="date" class="calendar__filters-calendar-element">
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="calendar__details-block">
+                <div class="calendar__results">
+                    <div class="calendar__results-filters">
+
+                        <div class="calendar__select">
+                            <div class="calendar__select-title-wrapper">
+
+                                <div class="calendar__select-btn-wrapper calendar__select-btn-wrapper--long">
+                                    <button class="calendar__select-btn" type="button">
+                                        <span class="calendar__select-btn-text">
+                                            Все типы событий
+                                        </span>
+                                        <span class="calendar__select-btn-icon">
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="calendar__select-dropdown">
+                                        <div class="calendar__select-dropdown-inner">
+                                            <ul class="calendar__select-dropdown-list">
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="event"
+                                                            class="calendar__select-checkbox-input" value="1">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            <span
+                                                                class="calendar__select-mark calendar__select-mark--rainbow">
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                                <span></span>
+                                                            </span>
+                                                            Все типы событий
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="event"
+                                                            class="calendar__select-checkbox-input" value="2">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            <span
+                                                                class="calendar__select-mark calendar__select-mark--blue">
+
+                                                            </span>
+                                                            Автограф-сессия
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="event"
+                                                            class="calendar__select-checkbox-input" value="3">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            <span
+                                                                class="calendar__select-mark calendar__select-mark--orange">
+
+                                                            </span>
+                                                            Благодтворительный матч
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="event"
+                                                            class="calendar__select-checkbox-input" value="3">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            <span
+                                                                class="calendar__select-mark calendar__select-mark--green">
+
+                                                            </span>
+                                                            День рождения
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="event"
+                                                            class="calendar__select-checkbox-input" value="4">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            <span
+                                                                class="calendar__select-mark calendar__select-mark--yellow">
+
+                                                            </span>
+                                                            Памятное событие
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="event"
+                                                            class="calendar__select-checkbox-input" value="5">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            <span
+                                                                class="calendar__select-mark calendar__select-mark--purple">
+
+                                                            </span>
+                                                            Пресс-конференция
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="calendar__results-list">
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card calendar__results-card--green-label">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        30 декабря 2022
+                                    </div>
+
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/flowers.svg" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-event">
+                                    <div class="calendar__results-card-event-image-container">
+                                        <img src="/placeholder.svg" alt="" class="calendar__results-card-event-image">
+                                    </div>
+                                    <div class="calendar__results-card-event-content">
+                                        <div class="calendar__results-card-event-title">
+                                            Константинопольский Константин Константинович
+                                        </div>
+                                        <div class="calendar__results-card-event-text">
+                                            Отмечает свой день роджения
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card calendar__results-card--blue-label">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        30 декабря 2022
+                                    </div>
+
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/bell.svg" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-event">
+
+                                    <div class="calendar__results-card-event-content">
+                                        <div class="calendar__results-card-event-title">
+                                            Игра между маскотами клубов Республики Татарстан
+                                        </div>
+
+                                    </div>
+                                    <div class="calendar__results-card-event-play-icon">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#play"></use>
+                                        </svg>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card calendar__results-card--yellow-label">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        30 декабря 2022
+                                    </div>
+
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/candle.svg" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-event">
+
+                                    <div class="calendar__results-card-event-content">
+                                        <div class="calendar__results-card-event-title">
+                                            Сегодня день памяти величайшего хоккеиста Ресублики
+                                            Татарстан Константинова Константина Константинополивеча
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card calendar__results-card--green-label">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        30 декабря 2022
+                                    </div>
+
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/flowers.svg" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-event">
+                                    <div class="calendar__results-card-event-image-container">
+                                        <img src="/placeholder.svg" alt="" class="calendar__results-card-event-image">
+                                    </div>
+                                    <div class="calendar__results-card-event-content">
+                                        <div class="calendar__results-card-event-title">
+                                            Константинопольский Константин Константинович
+                                        </div>
+                                        <div class="calendar__results-card-event-text">
+                                            Отмечает свой день роджения
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card calendar__results-card--blue-label">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        30 декабря 2022
+                                    </div>
+
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/bell.svg" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-event">
+
+                                    <div class="calendar__results-card-event-content">
+                                        <div class="calendar__results-card-event-title">
+                                            Игра между маскотами клубов Республики Татарстан
+                                        </div>
+
+                                    </div>
+                                    <div class="calendar__results-card-event-play-icon">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#play"></use>
+                                        </svg>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card calendar__results-card--yellow-label">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        30 декабря 2022
+                                    </div>
+
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/candle.svg" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-event">
+
+                                    <div class="calendar__results-card-event-content">
+                                        <div class="calendar__results-card-event-title">
+                                            Сегодня день памяти величайшего хоккеиста Ресублики
+                                            Татарстан Константинова Константина Константинополивеча
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

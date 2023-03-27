@@ -15,6 +15,8 @@ import leagueMatches from "./pages-data/leagueMatches";
 import leagueMatchesPlayoff from "./pages-data/leagueMatchesPlayoff";
 import leagueMatchesImage from "./pages-data/leagueMatchesImage";
 import calendar from "./pages-data/calendar";
+import calendar2 from "./pages-data/calendar-2";
+import calendar3 from "./pages-data/calendar-3";
 
 const pagesConfig = {
   ...home,
@@ -34,6 +36,8 @@ const pagesConfig = {
   ...leagueMatchesPlayoff,
   ...leagueMatchesImage,
   ...calendar,
+  ...calendar2,
+  ...calendar3,
 };
 
 export default pagesConfig;

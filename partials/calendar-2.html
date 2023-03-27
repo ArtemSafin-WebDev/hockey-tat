@@ -1,0 +1,782 @@
+<section class="calendar">
+    <div class="calendar__header">
+        <div class="calendar__header-inner">
+            <h1 class="calendar__heading">
+                Календарь событий
+            </h1>
+        </div>
+    </div>
+    <div class="calendar__content">
+        <div class="calendar__content-inner">
+            <div class="calendar__intro-block">
+                <div class="calendar__tabs-nav">
+                    <ul class="calendar__tabs-nav-list">
+                        <li class="calendar__tabs-nav-list-item">
+                            <a href="/calendar.html" class="calendar__tabs-nav-link">
+                                Все ТИПЫ событий
+                            </a>
+                        </li>
+                        <li class="calendar__tabs-nav-list-item">
+                            <a href="/calendar-2.html" class="calendar__tabs-nav-link active">
+                                ТОЛЬКО Матчи
+                            </a>
+                        </li>
+                        <li class="calendar__tabs-nav-list-item">
+                            <a href="/calendar-3.html" class="calendar__tabs-nav-link">
+                                ТОЛЬКО события
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <form action="" method="GET" class="calendar__filter-form">
+                    <div class="calendar__filter-form-fields">
+                        <div class="calendar__filter-form-field calendar__filter-form-field--calendar">
+                            <div class="calendar__filters-calendar">
+                                <label class="calendar__filters-calendar-label">
+                                    <input type="text" class="calendar__filters-calendar-input" readonly=""
+                                        value="27.03.2023">
+                                    <span class="calendar__filters-calendar-icon">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#calendar"></use>
+                                        </svg>
+                                    </span>
+                                </label>
+                                <div class="calendar__filters-calendar-dropdown">
+                                    <div class="calendar__filters-calendar-dropdown-inner">
+
+                                        <input type="hidden" name="date" class="calendar__filters-calendar-element">
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="calendar__details-block">
+                <div class="calendar__results">
+                    <div class="calendar__results-filters">
+                        <div class="calendar__select">
+                            <div class="calendar__select-title-wrapper">
+
+                                <div class="calendar__select-btn-wrapper calendar__select-btn-wrapper--long">
+                                    <button class="calendar__select-btn" type="button">
+                                        <span class="calendar__select-btn-text">
+                                            Все лиги и турниры
+                                        </span>
+                                        <span class="calendar__select-btn-icon">
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="calendar__select-dropdown">
+                                        <div class="calendar__select-dropdown-inner">
+                                            <ul class="calendar__select-dropdown-list">
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="league"
+                                                            class="calendar__select-checkbox-input" value="1">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            Все лиги и турниры
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="league"
+                                                            class="calendar__select-checkbox-input" value="2">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            Лига 1
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="league"
+                                                            class="calendar__select-checkbox-input" value="3">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            Лига 2
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar__select">
+                            <div class="calendar__select-title-wrapper">
+
+                                <div class="calendar__select-btn-wrapper calendar__select-btn-wrapper--long">
+                                    <button class="calendar__select-btn" type="button">
+                                        <span class="calendar__select-btn-text">
+                                            Все группы
+                                        </span>
+                                        <span class="calendar__select-btn-icon">
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="calendar__select-dropdown">
+                                        <div class="calendar__select-dropdown-inner">
+                                            <ul class="calendar__select-dropdown-list">
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="group"
+                                                            class="calendar__select-checkbox-input" value="1">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            Все группы
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="group"
+                                                            class="calendar__select-checkbox-input" value="2">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            Группа 1
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="group"
+                                                            class="calendar__select-checkbox-input" value="3">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            Группа 2
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar__select">
+                            <div class="calendar__select-title-wrapper">
+
+                                <div class="calendar__select-btn-wrapper calendar__select-btn-wrapper--long">
+                                    <button class="calendar__select-btn" type="button">
+                                        <span class="calendar__select-btn-text">
+                                            Все команды
+                                        </span>
+                                        <span class="calendar__select-btn-icon">
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="calendar__select-dropdown">
+                                        <div class="calendar__select-dropdown-inner">
+                                            <ul class="calendar__select-dropdown-list">
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="team"
+                                                            class="calendar__select-checkbox-input" value="1">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            Все команды
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="team"
+                                                            class="calendar__select-checkbox-input" value="2">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            Команда 1
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="calendar__select-dropdown-list-item">
+                                                    <label class="calendar__select-checkbox">
+                                                        <input type="radio" name="team"
+                                                            class="calendar__select-checkbox-input" value="3">
+                                                        <span class="calendar__select-checkbox-text">
+                                                            Команда 2
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ul class="calendar__results-list">
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        23 января 2023 <span class="divider">|</span> 19:30
+                                    </div>
+                                    <div class="calendar__results-card-city">
+                                        Казань
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/khl.webp" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-teams">
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Ак Барс
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Казань
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-score">
+                                        <div class="calendar__results-card-score-item">
+                                            11
+                                        </div>
+                                        <div class="calendar__results-card-score-divider">
+                                            :
+                                        </div>
+                                        <div class="calendar__results-card-score-item">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Нефтехимик
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Нижнекамск
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        23 января 2023 <span class="divider">|</span> 19:30
+                                    </div>
+                                    <div class="calendar__results-card-city">
+                                        Казань
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-icon">
+
+
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/khl.webp" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-teams">
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Ак Барс
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Казань
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-score">
+                                        <div class="calendar__results-card-score-item">
+                                            11
+                                        </div>
+                                        <div class="calendar__results-card-score-label">
+                                            бул
+                                        </div>
+                                        <div class="calendar__results-card-score-item">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Нефтехимик
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Нижнекамск
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        23 января 2023 <span class="divider">|</span> 19:30
+                                    </div>
+                                    <div class="calendar__results-card-city">
+                                        Казань
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/khl.webp" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-teams">
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Ак Барс
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Казань
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-score">
+                                        <div class="calendar__results-card-score-item">
+                                            11
+                                        </div>
+                                        <div class="calendar__results-card-score-divider">
+                                            :
+                                        </div>
+                                        <div class="calendar__results-card-score-item">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Нефтехимик
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Нижнекамск
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        23 января 2023 <span class="divider">|</span> 19:30
+                                    </div>
+                                    <div class="calendar__results-card-city">
+                                        Казань
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/khl.webp" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-teams">
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Ак Барс
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Казань
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-score">
+                                        <div class="calendar__results-card-score-item">
+                                            11
+                                        </div>
+                                        <div class="calendar__results-card-score-label">
+                                            бул
+                                        </div>
+                                        <div class="calendar__results-card-score-item">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Нефтехимик
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Нижнекамск
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        23 января 2023 <span class="divider">|</span> 19:30
+                                    </div>
+                                    <div class="calendar__results-card-city">
+                                        Казань
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/khl.webp" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-teams">
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Ак Барс
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Казань
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-score">
+                                        <div class="calendar__results-card-score-item">
+                                            11
+                                        </div>
+                                        <div class="calendar__results-card-score-divider">
+                                            :
+                                        </div>
+                                        <div class="calendar__results-card-score-item">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Нефтехимик
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Нижнекамск
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        23 января 2023 <span class="divider">|</span> 19:30
+                                    </div>
+                                    <div class="calendar__results-card-city">
+                                        Казань
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/khl.webp" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-teams">
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Ак Барс
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Казань
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-score">
+                                        <div class="calendar__results-card-score-item">
+                                            11
+                                        </div>
+                                        <div class="calendar__results-card-score-label">
+                                            бул
+                                        </div>
+                                        <div class="calendar__results-card-score-item">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Нефтехимик
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Нижнекамск
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        23 января 2023 <span class="divider">|</span> 19:30
+                                    </div>
+                                    <div class="calendar__results-card-city">
+                                        Казань
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/khl.webp" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-teams">
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Ак Барс
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Казань
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-score">
+                                        <div class="calendar__results-card-score-item">
+                                            11
+                                        </div>
+                                        <div class="calendar__results-card-score-divider">
+                                            :
+                                        </div>
+                                        <div class="calendar__results-card-score-item">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Нефтехимик
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Нижнекамск
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        23 января 2023 <span class="divider">|</span> 19:30
+                                    </div>
+                                    <div class="calendar__results-card-city">
+                                        Казань
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/khl.webp" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-teams">
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Ак Барс
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Казань
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-score">
+                                        <div class="calendar__results-card-score-item">
+                                            11
+                                        </div>
+                                        <div class="calendar__results-card-score-label">
+                                            бул
+                                        </div>
+                                        <div class="calendar__results-card-score-item">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Нефтехимик
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Нижнекамск
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        23 января 2023 <span class="divider">|</span> 19:30
+                                    </div>
+                                    <div class="calendar__results-card-city">
+                                        Казань
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/khl.webp" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-teams">
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Ак Барс
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Казань
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-score">
+                                        <div class="calendar__results-card-score-item">
+                                            11
+                                        </div>
+                                        <div class="calendar__results-card-score-divider">
+                                            :
+                                        </div>
+                                        <div class="calendar__results-card-score-item">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Нефтехимик
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Нижнекамск
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="calendar__results-list-item">
+                            <div class="calendar__results-card">
+                                <div class="calendar__results-card-info">
+                                    <div class="calendar__results-card-date">
+                                        23 января 2023 <span class="divider">|</span> 19:30
+                                    </div>
+                                    <div class="calendar__results-card-city">
+                                        Казань
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-icon">
+                                    <div class="calendar__results-card-icon-image-container">
+                                        <img src="/khl.webp" alt="" class="calendar__results-card-icon-image">
+                                    </div>
+                                </div>
+                                <div class="calendar__results-card-teams">
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Ак Барс
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Казань
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-score">
+                                        <div class="calendar__results-card-score-item">
+                                            11
+                                        </div>
+                                        <div class="calendar__results-card-score-label">
+                                            бул
+                                        </div>
+                                        <div class="calendar__results-card-score-item">
+                                            3
+                                        </div>
+                                    </div>
+                                    <div class="calendar__results-card-team">
+                                        <div class="calendar__results-card-team-logo-container">
+                                            <img src="/placeholder.svg" alt="" class="calendar__results-card-team-logo">
+                                        </div>
+                                        <div class="calendar__results-card-team-content">
+                                            <div class="calendar__results-card-team-name">
+                                                Нефтехимик
+                                            </div>
+                                            <div class="calendar__results-card-team-city">
+                                                Нижнекамск
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
