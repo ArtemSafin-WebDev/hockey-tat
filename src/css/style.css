@@ -34,3 +34,12 @@
 @import "league-news.css";
 @import "league-matches.css";
 @import "calendar.css";
+@import "adaptive-header.css";
+@import "adaptive-history.css";
+@import "adaptive-teams.css";
+@import "adaptive-stages.css";
+@import "adaptive-required.css";
+@import "adaptive-geography.css";
+@import "adaptive-support.css";
+@import "adaptive-news.css";
+@import "adaptive-partners.css";

@@ -1,0 +1,318 @@
+<section class="adaptive-header">
+    <div class="adaptive-header__content">
+        <h1 class="adaptive-header__heading" data-text="Адаптивный хоккей">
+            Адаптивный хоккей
+        </h1>
+        <div class="adaptive-header__text">
+            Разновидность хоккея с шайбой на льду для спортсменов с инвалидностью
+        </div>
+    </div>
+</section>
+
+
+<section class="adaptive-history">
+    <div class="adaptive-history__ticker js-ticker">
+        <div class="adaptive-history__ticker-inner js-ticker-inner">
+            История адаптивного хоккея&nbsp;
+        </div>
+    </div>
+    <div class="adaptive-history__content">
+
+        <div class="adaptive-history__col">
+            <div class="adaptive-history__image-wrapper">
+
+
+                <img src="/adaptive-history.webp" alt="" class="adaptive-history__image">
+            </div>
+        </div>
+        <div class="adaptive-history__col">
+            <div class="adaptive-history__text-content">
+
+
+                <h2 class="adaptive-history__heading">
+                    История адаптивного хоккея
+                </h2>
+                <div class="adaptive-history__text">
+                    Следж-хоккей – один из видов адаптивного хоккея. Зародился в 1960-х годах в Швеции, силами группы
+                    энтузиастов, которые хотели играть в хоккей, несмотря жизненные обстоятельства.
+                </div>
+                <a href="#" class="adaptive-history__link">
+                    Узнать больше!
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="adaptive-teams">
+    <div class="adaptive-teams__content">
+        <h2 class="adaptive-teams__heading" data-text="Команды в РТ">
+            Команды в РТ
+        </h2>
+        <div class="adaptive-teams__slider js-adaptive-teams-slider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    {{#each teams}}
+                        <div class="swiper-slide">
+                            <div class="adaptive-teams__card">
+                                <div class="adaptive-teams__card-image-container">
+                                    <img src="{{ src }}" alt="" class="adaptive-teams__card-image">
+                                </div>
+                                <h3 class="adaptive-teams__card-title">
+                                    {{ title }}
+                                </h3>
+                                <div class="adaptive-teams__card-founded">
+                                    {{ founded }}
+                                </div>
+                                <a href="#" class="adaptive-teams__card-link">
+                                    О команде
+                                </a>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="adaptive-teams__controls">
+                <ol class="adaptive-teams__pagination">
+                    {{#times 6}}
+                        <li class="adaptive-teams__pagination-bullet">
+                            <div class="adaptive-teams__pagination-bullet-dot">
+
+                            </div>
+                            <div class="adaptive-teams__pagination-bullet-timer">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="48" stroke-width="1" stroke="#D1D6CF" fill="none"
+                                        vector-effect="non-scaling-stroke" />
+                                </svg>
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="48" stroke-width="1" stroke="#008000" fill="none"
+                                        vector-effect="non-scaling-stroke" />
+                                </svg>
+                                <div class="adaptive-teams__pagination-bullet-timer-number">
+
+                                </div>
+                            </div>
+                        </li>
+                    {{/times}}
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="adaptive-stages">
+    <div class="adaptive-stages__content">
+        <h2 class="adaptive-stages__heading" data-text="Вехи развития адаптивного хоккея в РТ">
+            Вехи развития
+            адаптивного хоккея в РТ
+        </h2>
+        <div class="adaptive-stages__slider js-adaptive-stages-slider">
+            <div class="adaptive-stages__row">
+                <div class="adaptive-stages__left-col">
+                    <img src="/adaptive-stages.webp" alt="" class="adaptive-stages__image">
+                </div>
+                <div class="adaptive-stages__right-col">
+                    <div class="adaptive-stages__slider-wrapper">
+
+
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                {{#each stages}}
+                                    <div class="swiper-slide">
+                                        <div class="adaptive-stages__card">
+                                            <div class="adaptive-stages__card-date">
+                                                {{date}}
+                                            </div>
+                                            <h3 class="adaptive-stages__card-title">
+                                                {{title}}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ol class="adaptive-stages__slider-pagination">
+                {{#times 2}}
+                    <li class="adaptive-stages__slider-pagination-bullet">
+                        <div class="adaptive-stages__slider-pagination-bullet-dot">
+
+                        </div>
+                        <div class="adaptive-stages__slider-pagination-bullet-timer">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" stroke-width="1" stroke="#D1D6CF" fill="none"
+                                    vector-effect="non-scaling-stroke" />
+                            </svg>
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="48" stroke-width="1" stroke="#008000" fill="none"
+                                    vector-effect="non-scaling-stroke" />
+                            </svg>
+                            <div class="adaptive-stages__slider-pagination-bullet-timer-number">
+
+                            </div>
+                        </div>
+                    </li>
+                {{/times}}
+            </ol>
+            <a href="#" class="adaptive-stages__show-more">
+                Показать ещё
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section class="adaptive-required">
+    <div class="adaptive-required__content">
+        <h2 class="adaptive-required__heading" data-text="Что нужно для открытия следж-хоккейной команды?">
+            Что нужно для открытия следж-хоккейной команды?
+        </h2>
+        <ol class="adaptive-required__list">
+            <li class="adaptive-required__list-item">
+                <div class="adaptive-required__card">
+                    <h3 class="adaptive-required__card-title">
+                        Инициатива куратора
+                    </h3>
+                </div>
+            </li>
+            <li class="adaptive-required__list-item">
+                <div class="adaptive-required__card">
+                    <h3 class="adaptive-required__card-title">
+                        Подача заявки
+                    </h3>
+                    <div class="adaptive-required__card-text">
+                        в Центр развития
+                        адаптивного спорта РТ на получение
+                        базового набора экипировки
+                    </div>
+                </div>
+            </li>
+            <li class="adaptive-required__list-item">
+                <div class="adaptive-required__card">
+                    <h3 class="adaptive-required__card-title">
+                        Предоставление льда
+                    </h3>
+                    <div class="adaptive-required__card-text">
+                        для тренировок
+                        команды
+                    </div>
+                </div>
+            </li>
+            <li class="adaptive-required__list-item">
+                <div class="adaptive-required__card">
+                    <h3 class="adaptive-required__card-title">
+                        Подбор тренера
+                    </h3>
+                    <div class="adaptive-required__card-text">
+                        готового пройти
+                        переподготовку по данному виду спорта
+                    </div>
+                </div>
+            </li>
+        </ol>
+        <div class="adaptive-required__text-content">
+            <h3 class="adaptive-required__text-heading">
+                Центр развития адаптивного спорта Республики Татарстан открыт для инициатив
+                со стороны районов Татарстана
+            </h3>
+            <div class="adaptive-required__text-desc">
+                Энтузиастам, готовым курировать детскую следж-хоккейную команду, будет передан комплект из 10 саней,
+                формы и клюшек для детей. Важное условие создания команды – наличие свободного времени в ледовом дворце
+                для тренировок и специалиста, который пройдёт переподготовку.
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="adaptive-geography">
+    <div class="adaptive-geography__content">
+        <h2 class="adaptive-geography__heading" data-text="География следж-хоккея Республики Татарстан">
+            География следж-хоккея Республики Татарстан
+        </h2>
+    </div>
+    <div class="adaptive-geography__scroll-wrapper">
+        <img src="/adaptive-geography.webp" alt="" class="adaptive-geography__image">
+    </div>
+</section>
+
+<section class="adaptive-support">
+    <div class="adaptive-support__ticker js-ticker">
+        <div class="adaptive-support__ticker-inner js-ticker-inner">
+            Поддержи адаптивный хоккей&nbsp;
+        </div>
+    </div>
+    <div class="adaptive-support__content">
+
+        <div class="adaptive-support__col">
+            <img src="/adaptive-support.webp" alt="" class="adaptive-support__image">
+        </div>
+        <div class="adaptive-support__col">
+            <h2 class="adaptive-support__heading">
+                Поддержи адаптивный хоккей в РТ
+            </h2>
+            <div class="adaptive-support__text">
+                В сезоне 2021/22 «Ак Барс» запустил масштабный проект «Копилка «Ак Барса», в ходе которого игроки и
+                болельщики перечисляли средства на развитие следж-хоккея в Татарстане.
+            </div>
+            <div class="adaptive-support__slogan">
+                Присоединиться к проекту может любой желающий!
+            </div>
+            <a href="#" class="adaptive-support__link">
+                Хочу поддержать!
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="adaptive-news">
+    <div class="adaptive-news__content">
+        <h2 class="adaptive-news__heading" data-text="Статьи об адаптивном хоккее">
+            Статьи об адаптивном хоккее
+        </h2>
+        <ul class="adaptive-news__list">
+            {{#each articles}}
+                <li class="adaptive-news__list-item">
+                    {{> news-card }}
+                </li>
+            {{/each}}
+        </ul>
+        <a href="#" class="adaptive-news__show-more">
+            Показать ещё
+        </a>
+    </div>
+</section>
+
+
+<section class="adaptive-partners">
+    <div class="adaptive-partners__ticker js-ticker">
+        <div class="adaptive-partners__ticker-inner js-ticker-inner">
+            Партнёры адаптивного&nbsp;
+        </div>
+    </div>
+    <div class="adaptive-partners__content">
+
+        <div class="adaptive-partners__text-content">
+            <h2 class="adaptive-partners__heading">
+                Партнёры адаптивного хоккея РТ
+            </h2>
+            <div class="adaptive-partners__text">
+                В сезоне 2021/22 «Ак Барс» запустил масштабный проект «Копилка «Ак Барса», в ходе которого
+                игроки и болельщики перечисляли средства на развитие следж-хоккея в Татарстане.
+            </div>
+        </div>
+        <div class="adaptive-partners__images">
+
+
+            <img src="/adaptive-partners/1.svg" alt="" class="adaptive-partners__image">
+            <img src="/adaptive-partners/2.svg" alt="" class="adaptive-partners__image">
+        </div>
+
+    </div>
+</section>

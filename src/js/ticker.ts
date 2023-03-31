@@ -31,7 +31,7 @@ function ticker(
           trigger: element,
           start: "top bottom",
           end: "bottom top",
-          scrub: 1,
+          scrub: 2,
         },
       });
 

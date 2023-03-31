@@ -17,6 +17,7 @@ import leagueMatchesImage from "./pages-data/leagueMatchesImage";
 import calendar from "./pages-data/calendar";
 import calendar2 from "./pages-data/calendar-2";
 import calendar3 from "./pages-data/calendar-3";
+import adaptive from "./pages-data/adaptive";
 
 const pagesConfig = {
   ...home,
@@ -38,6 +39,7 @@ const pagesConfig = {
   ...calendar,
   ...calendar2,
   ...calendar3,
+  ...adaptive,
 };
 
 export default pagesConfig;

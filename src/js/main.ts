@@ -25,6 +25,9 @@ import leagueHeader from "./leagueHeader";
 import leagueTournaments from "./leagueTournaments";
 import leagueMatches from "./leagueMatches";
 import calendar from "./calendar";
+import adaptiveTeamsSlider from "./adaptiveTeamsSlider";
+import adaptiveStagesSlider from "./adaptiveStagesSlider";
+import adaptiveStagesShowMore from "./adaptiveStagesShowMore";
 
 document.addEventListener("DOMContentLoaded", () => {
   equipmentSlider();
@@ -52,4 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   leagueTournaments();
   leagueMatches();
   calendar();
+  adaptiveTeamsSlider();
+  adaptiveStagesSlider();
+  adaptiveStagesShowMore();
 });

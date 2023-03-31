@@ -1,0 +1,118 @@
+.adaptive-partners {
+  display: grid;
+  grid-template-columns:
+    [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
+    [content-end] 1fr [main-end];
+  grid-gap: var(--content-padding, 0);
+  margin-bottom: 12rem;
+}
+
+.adaptive-partners__ticker {
+  grid-column-start: main-start;
+  grid-column-end: main-end;
+  display: flex;
+  margin-bottom: 3rem;
+  user-select: none;
+}
+
+.adaptive-partners__ticker-inner {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26rem;
+  line-height: 1;
+  color: #ebebeb;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: auto;
+  box-sizing: border-box;
+  @media (--laptop) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.5rem;
+  }
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7rem;
+    line-height: 8rem;
+  }
+}
+.adaptive-partners__content {
+  grid-column-start: content-start;
+  grid-column-end: content-end;
+
+  @media (--desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 4rem;
+    align-items: center;
+  }
+
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.adaptive-partners__text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.adaptive-partners__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9rem;
+  line-height: 8rem;
+  margin-bottom: 6rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.adaptive-partners__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: #949891;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+  }
+}
+
+.adaptive-partners__images {
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 34rem;
+  width: 100%;
+
+  align-self: center;
+  justify-self: center;
+
+  @media (--mobile) {
+    gap: 5rem;
+    align-self: center;
+    max-width: 19rem;
+  }
+}
+
+.adaptive-partners__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
