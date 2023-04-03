@@ -15,6 +15,14 @@
   }
 }
 
+.quotes-slider--margin-bottom {
+  margin-bottom: 17rem;
+
+  @media (--mobile) {
+    margin-bottom: 6rem;
+  }
+}
+
 .quotes-slider__bg {
   position: absolute;
   inset: 0;
@@ -103,6 +111,12 @@
       width: auto;
       padding: 0 var(--content-padding);
     }
+
+    & .swiper-slide {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -115,6 +129,7 @@
   @media (--mobile) {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
   }
 }
 
@@ -137,9 +152,11 @@
   }
 
   @media (--mobile) {
+    margin: 0;
     margin-left: auto;
-    margin-right: -10rem;
-    margin-top: -10rem;
+    margin-top: auto;
+    width: 80%;
+    margin-right: -2rem;
   }
 }
 
@@ -149,8 +166,8 @@
   height: auto;
 
   @media (--mobile) {
-    height: 36rem;
-    width: auto;
+    width: 100%;
+    height: auto;
     max-width: none;
   }
 }

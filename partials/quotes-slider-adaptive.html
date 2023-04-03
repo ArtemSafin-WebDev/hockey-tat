@@ -1,0 +1,60 @@
+<section class="quotes-slider quotes-slider--margin-bottom">
+    <div class="quotes-slider__bg">
+        <div class="quotes-slider__bg-image-wrapper">
+            <img src="/quotes-slider.webp" alt="" class="quotes-slider__bg-image">
+        </div>
+
+    </div>
+    <div class="quotes-slider__content js-quotes-slider">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                {{#times 4}}
+                    <div class="swiper-slide">
+                        <div class="quotes-slider__card">
+                            <div class="quotes-slider__card-content">
+                                <div class="quotes-slider__card-quote-text">
+                                    «Система хоккея в Республике Татарстан должна стать системой замкнутого цикла,
+                                    направленной на воспитание здорового подрастающего поколения.»
+                                </div>
+                                <div class="quotes-slider__card-quote-author">
+                                    <div class="quotes-slider__card-quote-author-name">
+                                        Маганов Наиль Ульфатович
+                                    </div>
+                                    <div class="quotes-slider__card-quote-author-role">
+                                        Президент ХК «Ак Барс» с 2016 г.,<br>
+                                        Президент Федерации хоккея РТ
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quotes-slider__card-image-wrapper">
+                                <img src="/maganov.webp" alt="" class="quotes-slider__card-image">
+                            </div>
+                        </div>
+                    </div>
+                {{/times}}
+            </div>
+        </div>
+        <ol class="quotes-slider__pagination">
+            {{#times 4}}
+                <li class="quotes-slider__pagination-bullet">
+                    <div class="quotes-slider__pagination-bullet-dot">
+
+                    </div>
+                    <div class="quotes-slider__pagination-bullet-timer">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" stroke-width="1" stroke="white" fill="none"
+                                vector-effect="non-scaling-stroke" />
+                        </svg>
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" stroke-width="1" stroke="#FF0000" fill="none"
+                                vector-effect="non-scaling-stroke" />
+                        </svg>
+                        <div class="quotes-slider__pagination-bullet-timer-number">
+
+                        </div>
+                    </div>
+                </li>
+            {{/times}}
+        </ol>
+    </div>
+</section>
