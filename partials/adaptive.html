@@ -138,7 +138,7 @@
             </div>
 
             <ol class="adaptive-stages__slider-pagination">
-                {{#times 2}}
+                {{#times 3}}
                     <li class="adaptive-stages__slider-pagination-bullet">
                         <div class="adaptive-stages__slider-pagination-bullet-dot">
 
@@ -229,6 +229,122 @@
     </div>
 </section>
 
+
+<section class="adaptive-consultation">
+
+    <div class="adaptive-consultation__header">
+        <div class="adaptive-consultation__header-bg">
+            <img src="/adaptive-consultation.webp" alt="" class="adaptive-consultation__header-bg-image">
+        </div>
+        <div class="adaptive-consultation__header-content">
+
+
+            <h2 class="adaptive-consultation__heading" data-text="Получить консультацию">
+                Получить консультацию
+            </h2>
+            <div class="adaptive-consultation__text">
+                Оставьте заявку! Мы поможем вам с поиском команды либо ответим на ваши вопросы.
+            </div>
+            <div class="adaptive-consultation__contacts">
+                <div class="adaptive-consultation__contacts-text">
+                    Или вы можете отпарвить сообщение на электронный адрес:
+                </div>
+
+                <a href="mailto:hockey@tatar.ru" class="adaptive-consultation__contacts-link">hockey@tatar.ru
+                    <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <form action="/" method="POST" class="adaptive-consultation__form js-form-to-validate">
+        <div class="adaptive-consultation__form-fields">
+            <div class="adaptive-consultation__form-field adaptive-consultation__form-field--fullwidth">
+                <label class="adaptive-consultation__form-label">
+                    <input type="text" class="adaptive-consultation__form-input" placeholder="ФИО" name="name"
+                        required="">
+                    <span class="adaptive-consultation__form-label-text">
+                        ФИО
+                    </span>
+                </label>
+
+            </div>
+            <div class="adaptive-consultation__form-field js-calendar-field">
+                <label class="adaptive-consultation__form-label">
+                    <input type="text"
+                        class="adaptive-consultation__form-input adaptive-consultation__form-input--calendar"
+                        placeholder="Год рождения" name="date" required="" readonly="">
+                    <span class="adaptive-consultation__form-label-text">
+                        Год рождения
+                    </span>
+                </label>
+                <div class="adaptive-consultation__calendar-dropdown">
+                    <div class="adaptive-consultation__calendar-dropdown-inner">
+                        <input type="hidden" name="date" class="adaptive-consultation__calendar-dropdown-element">
+
+                    </div>
+                </div>
+            </div>
+            <div class="adaptive-consultation__form-field">
+                <label class="adaptive-consultation__form-label">
+                    <input type="text" class="adaptive-consultation__form-input" placeholder="E-mail / телефон"
+                        name="email" required="">
+                    <span class="adaptive-consultation__form-label-text">
+                        E-mail / телефон
+                    </span>
+                </label>
+            </div>
+            <div class="adaptive-consultation__form-field">
+                <label class="adaptive-consultation__form-label">
+                    <input type="text" class="adaptive-consultation__form-input" placeholder="Город" name="city"
+                        required="">
+                    <span class="adaptive-consultation__form-label-text">
+                        Город
+                    </span>
+                </label>
+            </div>
+            <div class="adaptive-consultation__form-field">
+                <label class="adaptive-consultation__form-label">
+                    <input type="text" class="adaptive-consultation__form-input" placeholder="Уровень подготовки"
+                        name="level" required="">
+                    <span class="adaptive-consultation__form-label-text">
+                        Уровень подготовки
+                    </span>
+                </label>
+            </div>
+            <div class="adaptive-consultation__form-field adaptive-consultation__form-field--fullwidth">
+                <label class="adaptive-consultation__form-label">
+                    <input type="text" class="adaptive-consultation__form-input" placeholder="Сообщение" name="comment"
+                        required="">
+                    <span class="adaptive-consultation__form-label-text">
+                        Сообщение
+                    </span>
+                </label>
+
+            </div>
+        </div>
+        <div class="adaptive-consultation__form-bottom-row">
+            <button class="adaptive-consultation__form-submit" type="submit">
+                Отправить заявку
+            </button>
+            <div class="adaptive-consultation__checkbox-wrapper">
+
+
+                <label class="adaptive-consultation__checkbox">
+                    <input type="checkbox" name="policy" value="1" class="adaptive-consultation__checkbox-input"
+                        required="" checked="">
+                    <span class="adaptive-consultation__checkbox-mark">
+
+                    </span>
+                    <span class="adaptive-consultation__checkbox-text">
+                        Согласие на обработку ваших персональных данных
+                    </span>
+                </label>
+            </div>
+        </div>
+    </form>
+</section>
 
 <section class="adaptive-geography">
     <div class="adaptive-geography__content">

@@ -28,6 +28,8 @@ import calendar from "./calendar";
 import adaptiveTeamsSlider from "./adaptiveTeamsSlider";
 import adaptiveStagesSlider from "./adaptiveStagesSlider";
 import adaptiveStagesShowMore from "./adaptiveStagesShowMore";
+import validation from "./validation";
+import adaptiveFormCalendar from "./adaptiveFormCalendar";
 
 document.addEventListener("DOMContentLoaded", () => {
   equipmentSlider();
@@ -58,4 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
   adaptiveTeamsSlider();
   adaptiveStagesSlider();
   adaptiveStagesShowMore();
+  validation();
+  adaptiveFormCalendar();
 });

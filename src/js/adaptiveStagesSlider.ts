@@ -49,7 +49,11 @@ function adaptiveStagesSlider(
           ease: "none",
           onComplete: () => {
             if (instance) {
-              instance.slideNext();
+              if (instance.isEnd) {
+                instance.slideTo(0);
+              } else {
+                instance.slideNext();
+              }
             }
           },
         }
@@ -113,7 +117,11 @@ function adaptiveStagesSlider(
     bullets.forEach((bullet, bulletIndex) => {
       bullet.addEventListener("click", (event: MouseEvent) => {
         event.preventDefault();
-        sliderInstance?.slideTo(bulletIndex);
+
+        const slideToIndex = bulletIndex * 2;
+        console.log("slideToIndex", slideToIndex);
+
+        sliderInstance?.slideTo(slideToIndex);
       });
     });
   });
