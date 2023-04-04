@@ -5,7 +5,7 @@
     [content-end] 1fr [main-end];
   grid-gap: var(--content-padding, 0);
   margin-bottom: 20rem;
-
+  overflow: hidden;
   @media (--mobile) {
     margin-bottom: 10rem;
   }

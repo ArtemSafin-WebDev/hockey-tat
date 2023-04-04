@@ -5,6 +5,7 @@
     [content-end] 1fr [main-end];
   grid-gap: var(--content-padding, 0);
   margin-bottom: 12rem;
+  overflow: hidden;
 }
 
 .adaptive-partners__ticker {

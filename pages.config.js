@@ -18,6 +18,8 @@ import calendar from "./pages-data/calendar";
 import calendar2 from "./pages-data/calendar-2";
 import calendar3 from "./pages-data/calendar-3";
 import adaptive from "./pages-data/adaptive";
+import support from "./pages-data/support";
+import adaptiveHistory from "./pages-data/adaptiveHistory";
 
 const pagesConfig = {
   ...home,
@@ -40,6 +42,8 @@ const pagesConfig = {
   ...calendar2,
   ...calendar3,
   ...adaptive,
+  ...support,
+  ...adaptiveHistory,
 };
 
 export default pagesConfig;
