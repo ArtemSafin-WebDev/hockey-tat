@@ -61,6 +61,19 @@ function adaptiveStagesSlider(
     }
   };
 
+  const stopAutoplay = (bullets: HTMLLIElement[]) => {
+    bullets.forEach((bullet) => {
+      bullet.classList.remove("active");
+      const circle = bullet.querySelector<SVGCircleElement>(
+        "svg:nth-child(2) circle"
+      );
+      gsap.killTweensOf(circle);
+      gsap.set(circle, {
+        drawSVG: "0% 0%",
+      });
+    });
+  };
+
   elements.forEach((element) => {
     const container: HTMLElement | null = element.querySelector(".swiper");
     const bullets = Array.from(
@@ -68,6 +81,8 @@ function adaptiveStagesSlider(
         ".adaptive-stages__slider-pagination-bullet"
       )
     );
+
+    let autoplayDisabled = false;
 
     console.log(container, bullets);
     if (!container) return;
@@ -88,6 +103,13 @@ function adaptiveStagesSlider(
           autoplayAtIndex(swiper.snapIndex, swiper, bullets);
         },
         slideChange: (swiper) => {
+          bullets.forEach((bullet, bulletIndex) => {
+            bullet.classList.remove("current");
+            if (bulletIndex === swiper.snapIndex) {
+              bullet.classList.add("current");
+            }
+          });
+          if (autoplayDisabled) return;
           console.log("Slide change", swiper.activeIndex, swiper.snapIndex);
           autoplayAtIndex(swiper.snapIndex, swiper, bullets);
         },
@@ -122,6 +144,10 @@ function adaptiveStagesSlider(
         console.log("slideToIndex", slideToIndex);
 
         sliderInstance?.slideTo(slideToIndex);
+
+        stopAutoplay(bullets);
+        autoplayDisabled = true;
+        element.classList.add("autoplay-disabled");
       });
     });
   });

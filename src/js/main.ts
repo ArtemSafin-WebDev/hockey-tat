@@ -30,13 +30,16 @@ import adaptiveStagesSlider from "./adaptiveStagesSlider";
 import adaptiveStagesShowMore from "./adaptiveStagesShowMore";
 import validation from "./validation";
 import adaptiveFormCalendar from "./adaptiveFormCalendar";
+import modals from "./modals";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import setScrollbarWidth from "./scrollbarWidth";
 
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
+  setScrollbarWidth();
   equipmentSlider();
   calendarSlider();
   newsSlider();
@@ -67,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   adaptiveStagesShowMore();
   validation();
   adaptiveFormCalendar();
+  modals();
 
   //@ts-ignore
   window.refreshScroll = () => ScrollTrigger.refresh();

@@ -149,6 +149,7 @@
     & .swiper-slide {
       display: flex !important;
       padding: 2rem;
+      order: 0 !important;
     }
   }
 
@@ -205,6 +206,13 @@
         transform: scale(1.5);
       }
     }
+  }
+}
+
+.autoplay-disabled .adaptive-stages__slider-pagination-bullet.current {
+  & .adaptive-stages__slider-pagination-bullet-dot {
+    background-color: var(--primary-color);
+    transform: scale(1.5);
   }
 }
 

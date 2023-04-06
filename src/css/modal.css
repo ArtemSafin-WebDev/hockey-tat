@@ -1,0 +1,155 @@
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+  z-index: 200;
+  background-color: rgba(255, 255, 255, 0.78);
+  padding: var(--content-padding);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+  backdrop-filter: blur(5px);
+
+  @media (hover: hover) {
+    &:not(.active) {
+      right: calc(-1 * var(--sb-width, 0));
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  @media (--mobile) {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.modal__inner {
+  width: 100%;
+  max-width: 109rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 10rem;
+  align-items: flex-start;
+  position: relative;
+
+  @media (--mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 2rem;
+    align-items: stretch;
+    max-width: none;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 20;
+
+  & svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #949891;
+  }
+
+  @media (--mobile) {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.modal__image-container {
+  width: 24rem;
+  flex-shrink: 0;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  @media (--mobile) {
+    width: 14rem;
+  }
+}
+
+.modal__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal__heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 4.7rem;
+  margin-bottom: 3.5rem;
+
+  @media (--mobile) {
+    font-size: 3rem;
+    line-height: 3.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.modal__date {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: #4e524e;
+  margin-bottom: 5.5rem;
+
+  @media (--mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.modal__text-content {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 3.3rem;
+  color: #19251e;
+
+  & p {
+    margin-top: 2rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  & img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    max-width: 100%;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
