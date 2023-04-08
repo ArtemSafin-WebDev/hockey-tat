@@ -31,10 +31,12 @@ import adaptiveStagesShowMore from "./adaptiveStagesShowMore";
 import validation from "./validation";
 import adaptiveFormCalendar from "./adaptiveFormCalendar";
 import modals from "./modals";
+import wantHockeyIntro from "./wantHockeyIntro";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import setScrollbarWidth from "./scrollbarWidth";
+import shopSlider from "./shopSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,6 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
   validation();
   adaptiveFormCalendar();
   modals();
+  shopSlider();
+  wantHockeyIntro();
 
   //@ts-ignore
   window.refreshScroll = () => ScrollTrigger.refresh();

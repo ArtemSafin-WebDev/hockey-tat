@@ -1,26 +1,29 @@
-.adaptive-history {
+.knowledge {
   display: grid;
   grid-template-columns:
     [main-start] 1fr [content-start] minmax(0, var(--container-width, 0))
     [content-end] 1fr [main-end];
   grid-gap: var(--content-padding, 0);
-  margin-bottom: 18rem;
   overflow: hidden;
+  padding-bottom: 20rem;
 
   @media (--mobile) {
-    margin-bottom: 7rem;
+    padding-bottom: 10rem;
   }
 }
 
-.adaptive-history__ticker {
+.knowledge__ticker {
   grid-column-start: main-start;
   grid-column-end: main-end;
   display: flex;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
   user-select: none;
-}
 
-.adaptive-history__ticker-inner {
+  @media (--mobile) {
+    margin-bottom: 3rem;
+  }
+}
+.knowledge__ticker-inner {
   font-style: normal;
   font-weight: 400;
   font-size: 19.5rem;
@@ -44,24 +47,30 @@
   }
 }
 
-.adaptive-history__content {
+.knowledge__content {
   grid-column-start: content-start;
   grid-column-end: content-end;
+  display: flex;
+  flex-direction: column;
+}
 
-  @media (--desktop) {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-gap: 4rem;
-    align-items: center;
-  }
+.knowledge__row {
+  padding: 0 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  grid-gap: 6rem;
 
   @media (--mobile) {
+    padding: 0;
     display: flex;
     flex-direction: column;
+    gap: 0;
+    align-items: stretch;
   }
 }
 
-.adaptive-history__col {
+.knowledge__text-content {
   display: flex;
   flex-direction: column;
 
@@ -70,90 +79,40 @@
   }
 }
 
-.adaptive-history__image-wrapper {
-  position: relative;
-  z-index: 1;
-
-  &::before {
-    content: "";
-    width: 56rem;
-    height: 56rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.6);
-    z-index: -1;
-    pointer-events: none;
-    background-image: url("../adaptive-history-blur.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  @media (--mobile) {
-    margin-bottom: 3rem;
-    order: 10;
-    &::before {
-      width: 100%;
-      padding-bottom: 100%;
-      height: auto;
-    }
-  }
-}
-
-.adaptive-history__image {
-  display: block;
-  width: 100%;
-  height: auto;
-
-  @media (--mobile) {
-    width: 80%;
-  }
-}
-
-.adaptive-history__text-content {
-  display: flex;
-  flex-direction: column;
-
-  @media (--mobile) {
-    display: contents;
-  }
-}
-
-.adaptive-history__heading {
+.knowledge__heading {
   font-style: normal;
   font-weight: 400;
   font-size: 9rem;
   line-height: 8rem;
-  margin-bottom: 6rem;
+  margin-bottom: 2.5rem;
 
   @media (--mobile) {
     font-style: normal;
     font-weight: 400;
     font-size: 4.5rem;
-    line-height: 4.5rem;
+    line-height: 1;
     margin-bottom: 3rem;
   }
 }
 
-.adaptive-history__text {
+.knowledge__text {
   font-style: normal;
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 3rem;
   color: #949891;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 
   @media (--mobile) {
     font-style: normal;
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 2.6rem;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
   }
 }
 
-.adaptive-history__link {
+.knowledge__link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -162,11 +121,11 @@
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2.6rem;
+  background-color: var(--primary-color);
   color: white;
   align-self: flex-start;
   padding: 1rem 3.5rem;
-  background: #008000;
-  box-shadow: 0px 1rem 2rem rgba(24, 207, 24, 0.15);
+  box-shadow: 0 1rem 2rem rgba(24, 207, 24, 0.15);
 
   &:link,
   &:visited {
@@ -174,8 +133,47 @@
   }
 
   @media (--mobile) {
+    order: 20;
     align-self: stretch;
     width: 100%;
-    order: 12;
+    position: relative;
+    z-index: 20;
+  }
+}
+
+.knowledge__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.knowledge__image-wrapper {
+  position: relative;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../knowledge-blur.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.7);
+    z-index: -1;
+    pointer-events: none;
+    filter: saturate(150%);
+  }
+
+  @media (--mobile) {
+    &::before,
+    &::after {
+      filter: none;
+    }
   }
 }

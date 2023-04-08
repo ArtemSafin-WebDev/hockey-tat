@@ -1,0 +1,51 @@
+<section class="shop">
+    <div class="shop__content">
+        <h2 class="shop__heading" data-text="Подобрите экипировку">
+            Подобрите экипировку
+        </h2>
+        <div class="shop__dark-text">
+            Хоккейная экипировка играет большую роль в качестве и эффективности игры хоккеиста. Важна комфортная и не
+            сковывающая движения форма, надежная защита, удобные коньки
+        </div>
+        <div class="shop__light-text">
+            Это высоко-динамичная игра и малейшая задержка, связанная с дискомфортом спортсмена может стоить команде
+            победы.
+        </div>
+        <div class="shop__slider js-shop-slider">
+            <button class="shop__slider-arrow shop__slider-arrow--prev">
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#arrow-left"></use>
+                </svg>
+            </button>
+            <div class="shop__slider-wrapper">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        {{#each shop}}
+                            <div class="swiper-slide">
+                                <a href="#shop-modal" class="show__slider-card">
+                                    <div class="show__slider-card-image-container">
+                                        <img src="{{ src }}" alt="" class="show__slider-card-image">
+                                    </div>
+                                    <h3 class="show__slider-card-title">
+                                        {{ title }}
+                                    </h3>
+                                </a>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <button class="shop__slider-arrow shop__slider-arrow--next">
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </button>
+        </div>
+        <a href="#" class="shop__link">
+            Перейти в магазин
+            <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#arrow-right"></use>
+            </svg>
+        </a>
+    </div>
+</section>

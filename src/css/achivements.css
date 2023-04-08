@@ -5,10 +5,12 @@
     [content-end] 1fr [main-end];
   grid-gap: var(--content-padding, 0);
   color: white;
+  margin-bottom: 15rem;
 
   @media (--mobile) {
     overflow-x: hidden;
     row-gap: 0;
+    margin-bottom: 6rem;
   }
 }
 
