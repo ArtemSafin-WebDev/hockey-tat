@@ -139,6 +139,23 @@ class Validator {
         const instance = new Inputmask({ mask: "+7 (999) 999-99-99" });
         instance.mask(field);
       }
+
+      if (field.matches('[inputmode="numeric"]')) {
+        field.addEventListener("beforeinput", (event) => {
+          let beforeValue = field.value;
+          event.target?.addEventListener(
+            "input",
+            () => {
+              if (field.validity.patternMismatch) {
+                field.value = beforeValue;
+              }
+            },
+            {
+              once: true,
+            }
+          );
+        });
+      }
     });
   }
 

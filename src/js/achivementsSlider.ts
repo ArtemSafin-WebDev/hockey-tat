@@ -94,6 +94,21 @@ function achivementsSlider(
         instance?.slideToLoop(bulletIndex);
       });
     });
+
+    document.addEventListener(
+      "tabclick",
+      (
+        event: CustomEvent<{
+          tab: HTMLElement | undefined;
+        }>
+      ) => {
+        const tab = event.detail.tab;
+        if (!tab) return;
+        if (tab.contains(element)) {
+          instance?.slideToLoop(0);
+        }
+      }
+    );
   });
 }
 

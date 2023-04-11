@@ -1,0 +1,68 @@
+<section class="adaptive-consultation">
+
+    <div class="adaptive-consultation__header">
+        <div class="adaptive-consultation__header-bg">
+            <img src="/adaptive-consultation.webp" alt="" class="adaptive-consultation__header-bg-image">
+        </div>
+        <div class="adaptive-consultation__header-content">
+            <h2 class="adaptive-consultation__heading" data-text="Оплатить банковской картой">
+                Оплатить банковской картой
+            </h2>
+        </div>
+    </div>
+    <form action="/" method="POST" class="adaptive-consultation__form js-form-to-validate">
+        <div class="adaptive-consultation__form-fields">
+            <div class="adaptive-consultation__form-field">
+                <label class="adaptive-consultation__form-label">
+                    <input type="text" class="adaptive-consultation__form-input" placeholder="Сумма" name="amount"
+                        inputmode="numeric" required="">
+                    <span class="adaptive-consultation__form-label-text">
+                        Сумма
+                    </span>
+                </label>
+            </div>
+            <div class="adaptive-consultation__form-field">
+                <label class="adaptive-consultation__form-label">
+                    <input type="text" class="adaptive-consultation__form-input" placeholder="ФИО" name="name"
+                        required="">
+                    <span class="adaptive-consultation__form-label-text">
+                        ФИО
+                    </span>
+                </label>
+            </div>
+            <div class="adaptive-consultation__form-field">
+                <label class="adaptive-consultation__form-label">
+                    <input type="email" class="adaptive-consultation__form-input" placeholder="E-mail" name="email"
+                        required="">
+                    <span class="adaptive-consultation__form-label-text">
+                        E-mail
+                    </span>
+                </label>
+            </div>
+            <div class="adaptive-consultation__form-field">
+                <label class="adaptive-consultation__form-label">
+                    <input type="tel" class="adaptive-consultation__form-input" placeholder="Контактный телефон"
+                        name="phone" required="">
+                    <span class="adaptive-consultation__form-label-text">
+                        Контактный телефон
+                    </span>
+                </label>
+            </div>
+            <div class="adaptive-consultation__form-field adaptive-consultation__form-field--fullwidth">
+                <label class="adaptive-consultation__form-label">
+                    <input type="text" class="adaptive-consultation__form-input" placeholder="Назначение платежа"
+                        name="purpose" required="">
+                    <span class="adaptive-consultation__form-label-text">
+                        Назначение платежа
+                    </span>
+                </label>
+            </div>
+        </div>
+        <div class="adaptive-consultation__form-bottom-row">
+            <button class="adaptive-consultation__form-submit" type="submit">
+                Отправить заявку
+            </button>
+
+        </div>
+    </form>
+</section>
