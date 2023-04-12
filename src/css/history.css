@@ -171,7 +171,17 @@
 
 .history__photos-card {
   aspect-ratio: 1 / 1;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    mix-blend-mode: color;
+    transition: opacity 0.4s, background-color 0.4s;
+  }
 }
 
 .history__photos-card-image {
@@ -181,9 +191,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: grayscale(100%);
 }
 
 .history__photos-slot {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   &:nth-child(1) {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
@@ -230,8 +243,8 @@
     position: absolute;
     inset: 0;
     background: #ff0000;
-    mix-blend-mode: color;
     opacity: 0.5;
+    mix-blend-mode: color;
   }
 }
 
@@ -240,8 +253,9 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: #008000;
+
     mix-blend-mode: color;
     opacity: 0.7;
+    background: #008000;
   }
 }

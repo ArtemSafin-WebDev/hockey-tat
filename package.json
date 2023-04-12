@@ -35,6 +35,7 @@
     "gsap": "^3.11.4",
     "hammerjs": "^2.0.8",
     "inputmask": "^5.0.8",
+    "lodash": "^4.17.21",
     "swiper": "^8.4.5",
     "validator": "^13.9.0"
   }
