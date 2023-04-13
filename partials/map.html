@@ -1,0 +1,192 @@
+<section class="map">
+    <div class="map__intro">
+        <div class="map__intro-content">
+            <h1 class="map__heading" data-text="Ледовые площадки">
+                Ледовые площадки
+            </h1>
+        </div>
+    </div>
+    <div class="map__content">
+        <div class="map__content-inner">
+            <div class="map__frame-wrapper">
+                <div class="map__filters">
+                    <div class="map__filters-panel">
+                        <button class="map__filters-panel-close">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#cross"></use>
+                            </svg>
+                        </button>
+                        <h3 class="map__filters-panel-heading">
+                            Фильтр по ледовым площадкам
+                        </h3>
+                        <form action="/" method="POST" class="map__filters-panel-form" id="map-filters">
+                            <div class="map__filters-selects">
+                                <div class="map__filters-select">
+                                    <button class="map__filters-select-btn" type="button"
+                                        data-placeholder-text="Муниципальный район">
+                                        <span class="map__filters-select-btn-text">
+                                            Муниципальный район
+                                        </span>
+                                        <span class="map__filters-select-btn-icon">
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="map__filters-select-dropdown">
+                                        <div class="map__filters-select-dropdown-inner">
+                                            <ul class="map__filters-select-dropdown-list">
+
+                                                <li class="map__filters-select-dropdown-list-item">
+                                                    <label class="map__filters-select-checkbox">
+                                                        <input type="radio" name="district"
+                                                            class="map__filters-select-checkbox-input" value="1">
+                                                        <span class="map__filters-select-checkbox-text">
+                                                            Район 1
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="map__filters-select-dropdown-list-item">
+                                                    <label class="map__filters-select-checkbox">
+                                                        <input type="radio" name="district"
+                                                            class="map__filters-select-checkbox-input" value="2">
+                                                        <span class="map__filters-select-checkbox-text">
+                                                            Район 2
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="map__filters-select-dropdown-list-item">
+                                                    <label class="map__filters-select-checkbox">
+                                                        <input type="radio" name="district"
+                                                            class="map__filters-select-checkbox-input" value="3">
+                                                        <span class="map__filters-select-checkbox-text">
+                                                            Район 3
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="map__filters-select map__filters-select--disabled">
+                                    <button class="map__filters-select-btn" type="button"
+                                        data-placeholder-text="Город/населённый пункт">
+                                        <span class="map__filters-select-btn-text">
+                                            Город/населённый пункт
+                                        </span>
+                                        <span class="map__filters-select-btn-icon">
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                    <div class="map__filters-select-dropdown">
+                                        <div class="map__filters-select-dropdown-inner">
+                                            <ul class="map__filters-select-dropdown-list">
+
+                                                <li class="map__filters-select-dropdown-list-item">
+                                                    <label class="map__filters-select-checkbox">
+                                                        <input type="radio" name="city"
+                                                            class="map__filters-select-checkbox-input" value="Казань">
+                                                        <span class="map__filters-select-checkbox-text">
+                                                            Казань
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="map__filters-select-dropdown-list-item">
+                                                    <label class="map__filters-select-checkbox">
+                                                        <input type="radio" name="city"
+                                                            class="map__filters-select-checkbox-input"
+                                                            value="Нижнекамск">
+                                                        <span class="map__filters-select-checkbox-text">
+                                                            Нижнекамск
+                                                        </span>
+                                                    </label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="map__filters-btns">
+                                <button class="map__filters-submit" type="submit">
+                                    Применить
+                                </button>
+                                <button class="map__filters-reset" type="reset">
+                                    Сбросить фильтр
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="map__filters-row">
+                        <button class="map__filters-toggle-btn">
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#filters"></use>
+                            </svg>
+                        </button>
+                        <div class="map__filters-checkboxes">
+                            <label class="map__filters-checkbox">
+                                <input type="checkbox" class="map__filters-checkbox-input" name="closed" value="1"
+                                    form="map-filters" checked="">
+                                <span class="map__filters-checkbox-mark">
+
+                                </span>
+                                <span class="map__filters-checkbox-text">
+                                    Крытые
+                                </span>
+                            </label>
+                            <label class="map__filters-checkbox">
+                                <input type="checkbox" class="map__filters-checkbox-input" name="open" value="1"
+                                    form="map-filters">
+                                <span class="map__filters-checkbox-mark">
+
+                                </span>
+                                <span class="map__filters-checkbox-text">
+                                    Открытые
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="map__frame">
+
+                </div>
+            </div>
+
+            <div class="map__balloon-wrapper">
+                <div class="map__balloon">
+                    <img src="/map-balloon-image.webp" alt="" class="map__balloon-image">
+                    <h3 class="map__balloon-title">
+                        ДС «Юбилейный»
+                    </h3>
+                    <div class="map__balloon-city">
+                        г. Альметьевск
+                    </div>
+                    <div class="map__balloon-address">
+                        ул. Белоглазова, 60
+                    </div>
+                    <div class="map__balloon-desc">
+                        <p>
+                            Дворец спорта «Юбилейный» — одно из лучших спортивных сооружений республики, является
+                            центром
+                            спортивной и культурной жизни города Альметьевск.
+                        </p>
+                        <p>
+                            Открытие ДС «Юбилейный» состоялось 17 февраля 1983 года.
+                        </p>
+                    </div>
+                    <a href="#" class="map__balloon-phone">
+                        +7 (8553) 32-49-83
+                    </a>
+                    <a href="#" class="map__balloon-link">
+                        ahc-neftyanik.ru
+                        <svg width="14" height="14" aria-hidden="true">
+                            <use xlink:href="#link"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -38,6 +38,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import setScrollbarWidth from "./scrollbarWidth";
 import shopSlider from "./shopSlider";
 import historyAnimation from "./history";
+import map from "./map";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
   shopSlider();
   wantHockeyIntro();
   historyAnimation();
+  map();
 
   //@ts-ignore
   window.refreshScroll = () => ScrollTrigger.refresh();

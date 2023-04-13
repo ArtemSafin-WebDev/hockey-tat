@@ -20,7 +20,7 @@ import calendar3 from "./pages-data/calendar-3";
 import adaptive from "./pages-data/adaptive";
 import support from "./pages-data/support";
 import adaptiveHistory from "./pages-data/adaptiveHistory";
-import wantHocker from "./pages-data/wantHockey";
+import map from "./pages-data/map";
 import wantHockey from "./pages-data/wantHockey";
 
 const pagesConfig = {
@@ -47,6 +47,7 @@ const pagesConfig = {
   ...support,
   ...adaptiveHistory,
   ...wantHockey,
+  ...map,
 };
 
 export default pagesConfig;
