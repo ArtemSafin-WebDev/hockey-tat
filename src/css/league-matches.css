@@ -1,8 +1,8 @@
 .league-matches {
-  margin-bottom: 12rem;
+  padding-bottom: 12rem;
   overflow: hidden;
   @media (--mobile) {
-    margin-bottom: 6rem;
+    padding-bottom: 6rem;
   }
 }
 .league-matches__header {

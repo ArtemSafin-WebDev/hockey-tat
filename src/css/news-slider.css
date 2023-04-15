@@ -31,6 +31,11 @@
 }
 
 .news-slider__inner {
+  & .swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
   @media (--desktop) {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
@@ -88,6 +93,7 @@
 }
 
 .news-slider__card {
+  flex-grow: 1;
   @media (--desktop) {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));

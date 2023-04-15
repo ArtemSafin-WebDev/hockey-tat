@@ -10,7 +10,7 @@ export default function map() {
       ".map__filters-panel-close"
     );
 
-    form.addEventListener("click", (event: MouseEvent) => {
+    document.addEventListener("click", (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       const insideSelect =
         target.matches(".map__filters-select") ||
@@ -33,6 +33,21 @@ export default function map() {
       const btn = select.querySelector(".map__filters-select-btn");
       const dropdown = select.querySelector(".map__filters-select-dropdown");
       const clickInsideBtn = btn.contains(target);
+
+      const selects = Array.from(
+        document.querySelectorAll(".map__filters-select")
+      );
+
+      selects.forEach((otherSelect) => {
+        if (otherSelect !== select) {
+          const btn = otherSelect.querySelector(".map__filters-select-btn");
+          const dropdown = otherSelect.querySelector(
+            ".map__filters-select-dropdown"
+          );
+          btn.classList.remove("active");
+          dropdown.classList.remove("active");
+        }
+      });
 
       if (clickInsideBtn) {
         dropdown.classList.toggle("active");

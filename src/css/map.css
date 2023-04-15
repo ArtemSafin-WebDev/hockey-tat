@@ -509,6 +509,16 @@
   }
 }
 
+@media (--desktop) {
+  .map__filters {
+    pointer-events: none;
+
+    & > * {
+      pointer-events: initial;
+    }
+  }
+}
+
 .map__filters-checkbox-input:checked ~ .map__filters-checkbox-mark {
   &::before {
     opacity: 1;
