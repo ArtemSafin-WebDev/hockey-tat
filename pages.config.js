@@ -22,6 +22,7 @@ import support from "./pages-data/support";
 import adaptiveHistory from "./pages-data/adaptiveHistory";
 import map from "./pages-data/map";
 import wantHockey from "./pages-data/wantHockey";
+import history from "./pages-data/history";
 
 const pagesConfig = {
   ...home,
@@ -48,6 +49,7 @@ const pagesConfig = {
   ...adaptiveHistory,
   ...wantHockey,
   ...map,
+  ...history,
 };
 
 export default pagesConfig;
