@@ -42,6 +42,7 @@ import map from "./map";
 import histGallerySlider from "./histGallerySlider";
 import histAkBars from "./histAkBars";
 import audio from "./audio";
+import histAnimations from "./histAnimations";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -88,4 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //@ts-ignore
   window.refreshScroll = () => ScrollTrigger.refresh();
+  window.addEventListener("load", () => {
+    histAnimations();
+  });
 });
